@@ -1,0 +1,13 @@
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\bin\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.exe
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\bin\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.deps.json
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\bin\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.runtimeconfig.json
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\bin\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.runtimeconfig.dev.json
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\bin\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.dll
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\bin\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.pdb
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.csprojAssemblyReference.cache
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.AssemblyInfoInputs.cache
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.AssemblyInfo.cs
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.csproj.CoreCompileInputs.cache
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.dll
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.pdb
+C:\Users\frank\Desktop\Proyecto-Pav1\ProyectoIntegradorPAVI\ProyectoIntegradorPAVI\obj\Debug\netcoreapp3.1\ProyectoIntegradorPAVI.genruntimeconfig.cache
