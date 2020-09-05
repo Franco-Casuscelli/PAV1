@@ -1,0 +1,10 @@
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.exe.config
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.exe
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.pdb
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csprojAssemblyReference.cache
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.FormPrincipal.resources
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Properties.Resources.resources
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.GenerateResource.cache
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CoreCompileInputs.cache
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
