@@ -34,5 +34,23 @@ namespace Facturación_de_proyectos_y_productos
         {
             MessageBox.Show("\n    Version 1.0.0 \n    Copyright ©2020\n\n","Acerca de...");
         }
+
+        private void crearToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form formulario = new CrearBarrio();
+            formulario.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ConsultarBarrio();
+            formulario.ShowDialog();
+        }
+
+        private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form formulario = new EliminarBarrio();
+            formulario.ShowDialog();
+        }
     }
 }

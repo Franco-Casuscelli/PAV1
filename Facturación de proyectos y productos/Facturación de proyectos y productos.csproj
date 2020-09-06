@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearBarrio.Designer.cs">
+      <DependentUpon>CrearBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarBarrio.Designer.cs">
+      <DependentUpon>ConsultarBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarBarrio.Designer.cs">
+      <DependentUpon>EliminarBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrearBarrio.resx">
+      <DependentUpon>CrearBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarBarrio.resx">
+      <DependentUpon>ConsultarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarBarrio.resx">
+      <DependentUpon>EliminarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
