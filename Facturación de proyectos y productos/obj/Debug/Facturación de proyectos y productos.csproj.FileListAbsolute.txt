@@ -11,3 +11,5 @@ C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\D
 C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearBarrio.resources
 C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarBarrio.resources
 C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.EliminarBarrio.resources
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\bin\Debug\SQLEXPRESS.mdf
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\bin\Debug\SQLEXPRESS_log.ldf

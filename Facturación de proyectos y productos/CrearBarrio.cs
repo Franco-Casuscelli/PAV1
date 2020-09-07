@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,66 @@ namespace Facturación_de_proyectos_y_productos
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+
+            if ((BoxBarrio.Text == ""))
+            {
+                MessageBox.Show("Por favor ingrese el nombre de un barrio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+
+                String NombreBarrio = BoxBarrio.Text;
+
+                SqlConnection conexion = new SqlConnection();
+
+                //Definimos la cadena de conexion a la base de datos.
+                conexion.ConnectionString = ".\\SQLEXPRESS";
+
+                //La sentencia try...catch nos permite "atrapar" excepciones (Errores) y dar al usuario un mensaje más amigable.
+                try
+                {
+                    //Abrimos la conexion a la base de datos.
+                    conexion.Open();
+                    
+                    //Construimos la consulta sql para buscar el usuario en la base de datos.
+                    String consultaSql = string.Concat("INSERT INTO Barrios (nombre,borrado) VALUES (@NombreBarrio,0)");
+
+                    //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
+                    SqlCommand command = new SqlCommand(consultaSql, conexion);
+
+                    // El metodo ExecuteReader retorna un objeto SqlDataReader con la respuesta de la base de datos. 
+                    // Con SqlDataReader los datos se leen fila por fila, cambiando de fila cada vez que se ejecuta el metodo Read()
+                    SqlDataReader reader = command.ExecuteReader();
+               
+
+                }
+                catch (SqlException ex)
+                {
+                    //Mostramos un mensaje de error indicando que hubo un error en la base de datos.
+                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    //Preguntamos si el estado de la conexion es abierto antes de cerrar la conexion.
+                    if (conexion.State == ConnectionState.Open)
+                    {
+                        //Cerramos la conexion
+                        conexion.Close();
+                    }
+                }
+
+
+
+
+     
+                BoxBarrio.Text = "";
+
+            }
         }
     }
 }
