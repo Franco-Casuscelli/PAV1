@@ -49,13 +49,13 @@ namespace Facturación_de_proyectos_y_productos
                 //La sentencia try...catch nos permite "atrapar" excepciones (Errores) y dar al usuario un mensaje más amigable.
                 try
                 {
-                    String NombreBarrio = BoxBarrio.Text;
+                    //String NombreBarrio = BoxBarrio.Text;
 
                     //Abrimos la conexion a la base de datos.
                     conexion.Open();
-                    
+
                     //Construimos la consulta sql para buscar el usuario en la base de datos.
-                    String consultaSql = "INSERT INTO Barrios (nombre,borrado) VALUES (@NombreBarrio,0)";
+                    String consultaSql = "INSERT INTO Barrios (nombre,borrado) VALUES ('"+ this.BoxBarrio.Text +"',0)";
 
                     //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
                     SqlCommand command = new SqlCommand(consultaSql, conexion);
@@ -63,7 +63,16 @@ namespace Facturación_de_proyectos_y_productos
 
                     // El metodo ExecuteReader retorna un objeto SqlDataReader con la respuesta de la base de datos. 
                     // Con SqlDataReader los datos se leen fila por fila, cambiando de fila cada vez que se ejecuta el metodo Read()
-                    SqlDataReader reader = command.ExecuteReader();
+                    try
+                    {
+                        SqlDataReader myReader;
+                        myReader = command.ExecuteReader();
+                        MessageBox.Show("Creado con exito!");
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                
 
                 }
