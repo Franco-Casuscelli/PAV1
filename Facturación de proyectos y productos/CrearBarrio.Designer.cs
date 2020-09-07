@@ -28,20 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblCrearBarrio = new System.Windows.Forms.Label();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(84, 104);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(232, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // lblCrearBarrio
+            // 
+            this.lblCrearBarrio.AutoSize = true;
+            this.lblCrearBarrio.Location = new System.Drawing.Point(131, 67);
+            this.lblCrearBarrio.Name = "lblCrearBarrio";
+            this.lblCrearBarrio.Size = new System.Drawing.Size(137, 13);
+            this.lblCrearBarrio.TabIndex = 1;
+            this.lblCrearBarrio.Text = "Ingrese el nombre del barrio";
+            this.lblCrearBarrio.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Location = new System.Drawing.Point(73, 165);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(113, 23);
+            this.btnCrear.TabIndex = 2;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(218, 165);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(113, 23);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // CrearBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 411);
+            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnCrear);
+            this.Controls.Add(this.lblCrearBarrio);
+            this.Controls.Add(this.textBox1);
             this.Name = "CrearBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Crear Barrios";
+            this.Text = "Crear Barrio";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblCrearBarrio;
+        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

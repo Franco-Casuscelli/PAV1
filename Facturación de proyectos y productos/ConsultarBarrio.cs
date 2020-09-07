@@ -16,5 +16,19 @@ namespace Facturación_de_proyectos_y_productos
         {
             InitializeComponent();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void lblBuscarBarrio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
