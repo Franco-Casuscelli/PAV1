@@ -3,7 +3,7 @@
 Bienvenidos a este repositorio, el cual cumple la funcion de administrar el **proyecto integrador** de la materia, este es el **Grupo Numero 4**
 
 **Importante**
-- Antes de ejecutar el Script de la BD, crear una bd vacia con el nombre "TP"
+- Antes de ejecutar el Script de la BD, crear una bd vacia con el nombre "TPI"
  
 Integrantes del Grupo:
 --
