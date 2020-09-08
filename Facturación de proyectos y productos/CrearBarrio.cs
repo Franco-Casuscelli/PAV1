@@ -39,8 +39,6 @@ namespace Facturación_de_proyectos_y_productos
             else
             {
 
-                
-            
                 SqlConnection conexion = new SqlConnection();
 
                 //Definimos la cadena de conexion a la base de datos.
@@ -55,18 +53,20 @@ namespace Facturación_de_proyectos_y_productos
                     conexion.Open();
 
                     //Construimos la consulta sql para buscar el usuario en la base de datos.
-                    String consultaSql = "INSERT INTO Barrios (nombre,borrado) VALUES ('"+ this.BoxBarrio.Text +"',0)";
+                    String consultaSql = "INSERT INTO Barrios (nombre,borrado) VALUES (@Nombre,@Borrado)";
 
                     //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
                     SqlCommand command = new SqlCommand(consultaSql, conexion);
+
+                    command.Parameters.AddWithValue("@Nombre", BoxBarrio.Text);
+                    command.Parameters.AddWithValue("@Borrado", 0);
 
 
                     // El metodo ExecuteReader retorna un objeto SqlDataReader con la respuesta de la base de datos. 
                     // Con SqlDataReader los datos se leen fila por fila, cambiando de fila cada vez que se ejecuta el metodo Read()
                     try
                     {
-                        SqlDataReader myReader;
-                        myReader = command.ExecuteReader();
+                        command.ExecuteNonQuery();
                         MessageBox.Show("Creado con exito!");
                     }
                     catch(Exception ex)
