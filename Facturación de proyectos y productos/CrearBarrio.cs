@@ -42,7 +42,7 @@ namespace Facturación_de_proyectos_y_productos
                 SqlConnection conexion = new SqlConnection();
 
                 //Definimos la cadena de conexion a la base de datos.
-                conexion.ConnectionString = "Data Source=(localdb)\\SQLEXPRESS";
+                conexion.ConnectionString = "Data Source=(localdb)\\SQLEXPRESS;Initial Catalog=TPI;Integrated Security=True";
 
                 //La sentencia try...catch nos permite "atrapar" excepciones (Errores) y dar al usuario un mensaje más amigable.
                 try
@@ -53,13 +53,14 @@ namespace Facturación_de_proyectos_y_productos
                     conexion.Open();
 
                     //Construimos la consulta sql para buscar el usuario en la base de datos.
-                    String consultaSql = "INSERT INTO Barrios (nombre,borrado) VALUES (@Nombre,@Borrado)";
+                    String consultaSql = "INSERT INTO dbo.Barrios (nombre,borrado) VALUES (@Nombre,@Borrado)";
 
                     //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
                     SqlCommand command = new SqlCommand(consultaSql, conexion);
 
                     command.Parameters.AddWithValue("@Nombre", BoxBarrio.Text);
                     command.Parameters.AddWithValue("@Borrado", 0);
+               
 
 
                     // El metodo ExecuteReader retorna un objeto SqlDataReader con la respuesta de la base de datos. 
@@ -67,7 +68,8 @@ namespace Facturación_de_proyectos_y_productos
                     try
                     {
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Creado con exito!");
+                       
+                        MessageBox.Show("Creado con exito!","Aviso",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch(Exception ex)
                     {
@@ -90,9 +92,6 @@ namespace Facturación_de_proyectos_y_productos
                         conexion.Close();
                     }
                 }
-
-
-
 
      
                 BoxBarrio.Text = "";

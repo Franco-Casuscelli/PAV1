@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblElmininar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BoxEliminarBarrio = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,12 +44,12 @@
             this.lblElmininar.Text = "Ingrese el nombre del barrio a eliminar";
             this.lblElmininar.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // BoxEliminarBarrio
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 20);
-            this.textBox1.TabIndex = 1;
+            this.BoxEliminarBarrio.Location = new System.Drawing.Point(101, 93);
+            this.BoxEliminarBarrio.Name = "BoxEliminarBarrio";
+            this.BoxEliminarBarrio.Size = new System.Drawing.Size(181, 20);
+            this.BoxEliminarBarrio.TabIndex = 1;
             // 
             // btnEliminar
             // 
@@ -59,6 +59,7 @@
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
@@ -77,7 +78,7 @@
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BoxEliminarBarrio);
             this.Controls.Add(this.lblElmininar);
             this.Name = "EliminarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -90,7 +91,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblElmininar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox BoxEliminarBarrio;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCancelar;
     }
