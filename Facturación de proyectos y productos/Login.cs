@@ -29,7 +29,7 @@ namespace Facturación_de_proyectos_y_productos
 
             SqlConnection conexion = new SqlConnection();
 
-            conexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=TPI;Integrated Security=true;";
+            conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
             try
             {

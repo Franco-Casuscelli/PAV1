@@ -37,6 +37,8 @@ namespace Facturación_de_proyectos_y_productos
             }
             else
             {
+
+            
                 SqlConnection conexion = new SqlConnection();
                 
                 //Definimos la cadena de conexion a la base de datos.
@@ -66,15 +68,18 @@ namespace Facturación_de_proyectos_y_productos
 
                         string IdBarrio = reader["id_barrio"].ToString();
 
-                       /* String cambio = "INSERT INTO dbo.Barrios (borrado) VALUES (@Borrado)";
+                        reader.Close();
+
+                        String cambio = "UPDATE dbo.Barrios SET borrado = @Borrado WHERE id_barrio = @valor";
 
                         SqlCommand comando = new SqlCommand(cambio, conexion);
+                        comando.Parameters.AddWithValue("@valor", IdBarrio);
                         comando.Parameters.AddWithValue("@Borrado", 1);
 
                         comando.ExecuteNonQuery();
 
                         MessageBox.Show("Eliminado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        */
+                         
                     }
                     else
                     {
@@ -99,8 +104,12 @@ namespace Facturación_de_proyectos_y_productos
                 }
 
 
+
                 BoxEliminarBarrio.Text = "";
             }
+
+            
+
         }
     }
 }
