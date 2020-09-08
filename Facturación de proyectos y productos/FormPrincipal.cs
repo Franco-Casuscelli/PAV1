@@ -52,5 +52,12 @@ namespace Facturación_de_proyectos_y_productos
             Form formulario = new EliminarBarrio();
             formulario.ShowDialog();
         }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            Login login = new Login();
+            login.ShowDialog();
+        }
     }
 }
