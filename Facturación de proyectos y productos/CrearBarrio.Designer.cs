@@ -75,11 +75,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.lblCrearBarrio);
             this.Controls.Add(this.BoxBarrio);
+            this.MinimizeBox = false;
             this.Name = "CrearBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Crear Barrio";

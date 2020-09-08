@@ -50,6 +50,8 @@
             this.eliminarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtMenu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +63,8 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(384, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 6, 0, 6);
+            this.menuStrip1.Size = new System.Drawing.Size(384, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +73,7 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -88,7 +91,7 @@
             this.contactosToolStripMenuItem,
             this.proyectosToolStripMenuItem});
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(85, 19);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
             // clientesToolStripMenuItem
@@ -211,22 +214,51 @@
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AcercaDe});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 19);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // AcercaDe
             // 
             this.AcercaDe.Name = "AcercaDe";
-            this.AcercaDe.Size = new System.Drawing.Size(135, 22);
+            this.AcercaDe.Size = new System.Drawing.Size(180, 22);
             this.AcercaDe.Text = "Acerca de...";
             this.AcercaDe.Click += new System.EventHandler(this.AcercaDe_Click);
             // 
+            // txtMenu
+            // 
+            this.txtMenu.AutoSize = true;
+            this.txtMenu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMenu.Location = new System.Drawing.Point(135, 125);
+            this.txtMenu.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.txtMenu.Name = "txtMenu";
+            this.txtMenu.Size = new System.Drawing.Size(119, 30);
+            this.txtMenu.TabIndex = 1;
+            this.txtMenu.Text = "MODULO 4";
+            this.txtMenu.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(63, 155);
+            this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(268, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Facturación de proyectos y productos";
+            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtMenu);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -263,6 +295,8 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AcercaDe;
+        private System.Windows.Forms.Label txtMenu;
+        private System.Windows.Forms.Label label1;
     }
 }
 

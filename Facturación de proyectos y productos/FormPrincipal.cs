@@ -59,5 +59,10 @@ namespace Facturación_de_proyectos_y_productos
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

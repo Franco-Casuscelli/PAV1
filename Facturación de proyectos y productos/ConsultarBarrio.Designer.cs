@@ -83,12 +83,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.listBoxBarrios);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblBuscarBarrio);
             this.Controls.Add(this.btnBuscar);
+            this.MinimizeBox = false;
             this.Name = "ConsultarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consultar Barrios";
