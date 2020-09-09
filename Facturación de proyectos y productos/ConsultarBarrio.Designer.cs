@@ -30,9 +30,10 @@
         {
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblBuscarBarrio = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBoxBarrios = new System.Windows.Forms.ListBox();
+            this.TextConsultaBarrio = new System.Windows.Forms.TextBox();
             this.Return = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -43,6 +44,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblBuscarBarrio
             // 
@@ -54,20 +56,13 @@
             this.lblBuscarBarrio.Text = "Ingrese el barrio a buscar";
             this.lblBuscarBarrio.Click += new System.EventHandler(this.lblBuscarBarrio_Click);
             // 
-            // textBox1
+            // TextConsultaBarrio
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // listBoxBarrios
-            // 
-            this.listBoxBarrios.FormattingEnabled = true;
-            this.listBoxBarrios.Location = new System.Drawing.Point(12, 162);
-            this.listBoxBarrios.Name = "listBoxBarrios";
-            this.listBoxBarrios.Size = new System.Drawing.Size(360, 134);
-            this.listBoxBarrios.TabIndex = 3;
+            this.TextConsultaBarrio.Location = new System.Drawing.Point(100, 74);
+            this.TextConsultaBarrio.Name = "TextConsultaBarrio";
+            this.TextConsultaBarrio.Size = new System.Drawing.Size(178, 20);
+            this.TextConsultaBarrio.TabIndex = 2;
+            this.TextConsultaBarrio.TextChanged += new System.EventHandler(this.TextConsultaBarrio_TextChanged);
             // 
             // Return
             // 
@@ -79,21 +74,30 @@
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 153);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(360, 174);
+            this.dataGridView.TabIndex = 5;
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Return);
-            this.Controls.Add(this.listBoxBarrios);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextConsultaBarrio);
             this.Controls.Add(this.lblBuscarBarrio);
             this.Controls.Add(this.btnBuscar);
             this.MinimizeBox = false;
             this.Name = "ConsultarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consultar Barrios";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,8 +107,8 @@
 
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblBuscarBarrio;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBoxBarrios;
+        private System.Windows.Forms.TextBox TextConsultaBarrio;
         private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
