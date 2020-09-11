@@ -30,3 +30,4 @@ C:\Users\Mateo\Desktop\Nueva carpeta (2)\Facturación de proyectos y productos\b
 C:\Users\Mateo\Desktop\Nueva carpeta (2)\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.pdb
 C:\Users\Mateo\Desktop\Nueva carpeta (2)\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Login.resources
 C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Login.resources
+C:\Users\frank\Desktop\Proyecto-Pav1\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarBarrio.resources

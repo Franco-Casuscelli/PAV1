@@ -52,6 +52,7 @@ namespace Facturación_de_proyectos_y_productos
                     //Abrimos la conexion a la base de datos.
                     conexion.Open();
 
+
                     //Construimos la consulta sql para buscar el usuario en la base de datos.
                     String consultaSql = "INSERT INTO dbo.Barrios (nombre,borrado) VALUES (@Nombre,@Borrado)";
 
