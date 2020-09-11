@@ -57,23 +57,18 @@ namespace Facturación_de_proyectos_y_productos
                     //Construimos la consulta sql para buscar el usuario en la base de datos.
                     String consultaSql = string.Concat(" SELECT * ",
                                                        "   FROM Barrios ",
-                                                       "  WHERE nombre = @Nombre ");
+                                                       "  WHERE nombre LIKE '%"+this.TextConsultaBarrio.Text+"%' ");
 
                     //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
                     SqlCommand command = new SqlCommand(consultaSql, conexion);
 
-                    command.Parameters.AddWithValue("@Nombre", TextConsultaBarrio.Text);
-
-                    // El metodo ExecuteReader retorna un objeto SqlDataReader con la respuesta de la base de datos. 
-                    // Con SqlDataReader los datos se leen fila por fila, cambiando de fila cada vez que se ejecuta el metodo Read()
                     SqlDataAdapter reader = new SqlDataAdapter(command);
 
                     DataTable tabla = new DataTable();
                     reader.Fill(tabla);
 
                     dataGridView.DataSource = tabla;
-                    // El metodo Read() lee la primera fila disponible, si NO existe una fila retorna false (la consulta no devolvio resultados).
-
+                    
                    
                     
 
@@ -95,7 +90,7 @@ namespace Facturación_de_proyectos_y_productos
 
 
 
-                //TextConsultaBarrio.Text = "";
+                TextConsultaBarrio.Text = "";
             }
 
         }

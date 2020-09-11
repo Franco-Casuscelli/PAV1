@@ -77,9 +77,9 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 153);
+            this.dataGridView.Location = new System.Drawing.Point(21, 151);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(360, 174);
+            this.dataGridView.Size = new System.Drawing.Size(342, 174);
             this.dataGridView.TabIndex = 5;
             // 
             // ConsultarBarrio
