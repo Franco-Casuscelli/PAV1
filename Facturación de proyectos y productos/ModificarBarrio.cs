@@ -12,9 +12,11 @@ namespace Facturación_de_proyectos_y_productos
 {
     public partial class ModificarBarrio : Form
     {
-        public ModificarBarrio()
+        String ID;
+        public ModificarBarrio(String datoID)
         {
             InitializeComponent();
+            ID = datoID;
         }
 
         private void lblCrearBarrio_Click(object sender, EventArgs e)
@@ -30,6 +32,16 @@ namespace Facturación_de_proyectos_y_productos
         private void Return_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ModificarBarrio_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(ID);
         }
     }
 }

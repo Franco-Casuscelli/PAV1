@@ -60,6 +60,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Guardar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Return
             // 
@@ -85,6 +86,7 @@
             this.Name = "ModificarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modificar Barrio";
+            this.Load += new System.EventHandler(this.ModificarBarrio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

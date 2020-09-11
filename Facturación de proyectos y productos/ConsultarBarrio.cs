@@ -102,8 +102,14 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Form formulario = new ModificarBarrio();
+            String datoID = this.dataGridView.CurrentCell.Value.ToString();
+            //MessageBox.Show(datoID);
+
+
+            Form formulario = new ModificarBarrio(datoID);
+            
             formulario.ShowDialog();
+
         }
     }
 }
