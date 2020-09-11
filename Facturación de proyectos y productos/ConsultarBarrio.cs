@@ -36,13 +36,7 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if ((TextConsultaBarrio.Text == ""))
-            {
-                MessageBox.Show("Por favor ingrese el nombre de un barrio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            else
-            {
+            
                 SqlConnection conexion = new SqlConnection();
 
                 //Definimos la cadena de conexion a la base de datos.
@@ -91,7 +85,7 @@ namespace Facturación_de_proyectos_y_productos
 
 
                 TextConsultaBarrio.Text = "";
-            }
+            
 
         }
 

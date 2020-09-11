@@ -34,6 +34,7 @@
             this.Return = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.lblFila = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,12 +94,22 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // lblFila
+            // 
+            this.lblFila.AutoSize = true;
+            this.lblFila.Location = new System.Drawing.Point(18, 135);
+            this.lblFila.Name = "lblFila";
+            this.lblFila.Size = new System.Drawing.Size(79, 13);
+            this.lblFila.TabIndex = 7;
+            this.lblFila.Text = "Seleccionar fila";
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.lblFila);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Return);
@@ -123,5 +134,6 @@
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label lblFila;
     }
 }
