@@ -52,7 +52,6 @@
             this.AcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.txtMenu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,8 +127,7 @@
             this.barriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem1,
             this.consultarToolStripMenuItem1,
-            this.eliminarToolStripMenuItem1,
-            this.modificarToolStripMenuItem});
+            this.eliminarToolStripMenuItem1});
             this.barriosToolStripMenuItem.Name = "barriosToolStripMenuItem";
             this.barriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barriosToolStripMenuItem.Text = "Barrios";
@@ -249,13 +247,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Facturación de proyectos y productos";
             // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 37F);
@@ -306,7 +297,6 @@
         private System.Windows.Forms.ToolStripMenuItem AcercaDe;
         private System.Windows.Forms.Label txtMenu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
     }
 }
 

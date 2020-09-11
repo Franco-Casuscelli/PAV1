@@ -99,5 +99,11 @@ namespace Facturación_de_proyectos_y_productos
         {
 
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ModificarBarrio();
+            formulario.ShowDialog();
+        }
     }
 }

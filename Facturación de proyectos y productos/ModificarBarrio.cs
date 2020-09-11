@@ -16,5 +16,20 @@ namespace Facturación_de_proyectos_y_productos
         {
             InitializeComponent();
         }
+
+        private void lblCrearBarrio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BoxBarrio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

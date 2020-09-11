@@ -33,6 +33,7 @@
             this.TextConsultaBarrio = new System.Windows.Forms.TextBox();
             this.Return = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(136, 346);
+            this.Return.Location = new System.Drawing.Point(211, 347);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(123, 23);
             this.Return.TabIndex = 4;
@@ -82,12 +83,23 @@
             this.dataGridView.Size = new System.Drawing.Size(342, 174);
             this.dataGridView.TabIndex = 5;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(48, 347);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(123, 23);
+            this.btnModificar.TabIndex = 6;
+            this.btnModificar.Text = "Modificar ";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.TextConsultaBarrio);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.TextBox TextConsultaBarrio;
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
