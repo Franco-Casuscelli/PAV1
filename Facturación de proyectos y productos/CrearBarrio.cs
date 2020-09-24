@@ -38,7 +38,7 @@ namespace Facturación_de_proyectos_y_productos
             }
             else
             {
-
+                
                 SqlConnection conexion = new SqlConnection();
 
                 
@@ -52,30 +52,56 @@ namespace Facturación_de_proyectos_y_productos
                     //Abrimos la conexion a la base de datos.
                     conexion.Open();
 
+                    String consultaSqlNombreRepetido = "Select * From Barrios where nombre = '"+this.BoxBarrio.Text + "' ";
+                    SqlCommand command2 = new SqlCommand(consultaSqlNombreRepetido, conexion);
 
-                    //Construimos la consulta sql para buscar el usuario en la base de datos.
-                    String consultaSql = "INSERT INTO dbo.Barrios (nombre,borrado) VALUES (@Nombre,@Borrado)";
+                    SqlDataReader reader = command2.ExecuteReader();
 
-                    //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
-                    SqlCommand command = new SqlCommand(consultaSql, conexion);
+                    //buscamos si ya esta cargado ese nombre de barrio
+                    if (reader.Read())
+                    {
+                        string NombreBarrio = reader["nombre"].ToString();
+                        reader.Close();
 
-                    command.Parameters.AddWithValue("@Nombre", BoxBarrio.Text);
-                    command.Parameters.AddWithValue("@Borrado", 0);
-               
+                        if (NombreBarrio == BoxBarrio.Text)
+                        {
+                            MessageBox.Show("El nombre Ingresado ya esta registrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            BoxBarrio.Text = "";
+                            return;
 
+                        }
+
+                    }
+                            //si llegamos hasta aca no esta repetido entonces cerramos el reader anterior
+                            reader.Close();
+                            
+
+                            String consultaSql = "INSERT INTO dbo.Barrios (nombre,borrado) VALUES (@Nombre,@Borrado)";
+
+                            //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
+                            SqlCommand command = new SqlCommand(consultaSql, conexion);
+
+                            command.Parameters.AddWithValue("@Nombre", BoxBarrio.Text);
+                            command.Parameters.AddWithValue("@Borrado", 0);
+
+                            try
+                            {
+                                command.ExecuteNonQuery();
+
+                                MessageBox.Show("Creado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                return;
+                            }
+                        
 
                     
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                       
-                        MessageBox.Show("Creado con exito!","Aviso",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-               
+                   
+                    
+   
 
                 }
                 catch (SqlException ex)
