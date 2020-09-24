@@ -49,8 +49,7 @@ namespace Facturación_de_proyectos_y_productos
 
         private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form formulario = new EliminarBarrio();
-            formulario.ShowDialog();
+            
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)

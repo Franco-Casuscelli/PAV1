@@ -47,6 +47,7 @@
             // BoxBarrio
             // 
             this.BoxBarrio.Location = new System.Drawing.Point(81, 98);
+            this.BoxBarrio.MaxLength = 50;
             this.BoxBarrio.Name = "BoxBarrio";
             this.BoxBarrio.Size = new System.Drawing.Size(226, 20);
             this.BoxBarrio.TabIndex = 2;

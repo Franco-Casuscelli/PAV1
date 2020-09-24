@@ -39,10 +39,10 @@ namespace Facturación_de_proyectos_y_productos
             
                 SqlConnection conexion = new SqlConnection();
 
-                //Definimos la cadena de conexion a la base de datos.
+                
                 conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
-                //La sentencia try...catch nos permite "atrapar" excepciones (Errores) y dar al usuario un mensaje más amigable.
+                
                 try
                 {
                     //Abrimos la conexion a la base de datos.
@@ -69,7 +69,7 @@ namespace Facturación_de_proyectos_y_productos
                 }
                 catch (SqlException ex)
                 {
-                    //Mostramos un mensaje de error indicando que hubo un error en la base de datos.
+                    
                     MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
@@ -97,12 +97,71 @@ namespace Facturación_de_proyectos_y_productos
         private void btnModificar_Click(object sender, EventArgs e)
         {
             String datoID = this.dataGridView.CurrentCell.Value.ToString();
-            //MessageBox.Show(datoID);
+            
 
 
             Form formulario = new ModificarBarrio(datoID);
             
             formulario.ShowDialog();
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            String datoID = this.dataGridView.CurrentCell.Value.ToString();
+            
+
+            if (MessageBox.Show("¿Esta seguro que desea Eliminar este barrio?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SqlConnection conexion = new SqlConnection();
+
+                
+                conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                
+                try
+                {
+                    
+                    conexion.Open();
+
+
+                        String cambio = "UPDATE dbo.Barrios SET borrado = @Borrado WHERE id_barrio = @valor";
+
+                        SqlCommand comando = new SqlCommand(cambio, conexion);
+
+                        comando.Parameters.AddWithValue("@valor", datoID);
+                        comando.Parameters.AddWithValue("@Borrado", 1);
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Eliminado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                    
+
+                
+                catch (SqlException ex)
+                {
+                   
+                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                   
+                    if (conexion.State == ConnectionState.Open)
+                    {
+                        //Cerramos la conexion
+                        conexion.Close();
+                    }
+                }
+
+
+
+            }
+
+        
+
+
 
         }
     }

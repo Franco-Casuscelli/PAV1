@@ -35,6 +35,7 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.lblFila = new System.Windows.Forms.Label();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +69,9 @@
             // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(211, 347);
+            this.Return.Location = new System.Drawing.Point(250, 347);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(123, 23);
+            this.Return.Size = new System.Drawing.Size(101, 23);
             this.Return.TabIndex = 4;
             this.Return.Text = "Volver al menu";
             this.Return.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(48, 347);
+            this.btnModificar.Location = new System.Drawing.Point(36, 347);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(123, 23);
+            this.btnModificar.Size = new System.Drawing.Size(101, 23);
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar ";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -103,12 +104,23 @@
             this.lblFila.TabIndex = 7;
             this.lblFila.Text = "Seleccionar fila";
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(143, 347);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(101, 23);
+            this.BtnEliminar.TabIndex = 8;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.lblFila);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dataGridView);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblFila;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }

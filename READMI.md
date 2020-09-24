@@ -13,7 +13,6 @@ Listo, para conectar a la db utilizar **(localdb)\SQLEXPRESS**.
  
 Integrantes del Grupo:
 --
-- Florencia Cornier - 71634
 - Franco Casuscelli - 67021
 - Mateo Biasotto - 69811
 - Miguel Cespedes - 70590

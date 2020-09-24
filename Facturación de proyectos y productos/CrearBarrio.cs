@@ -41,13 +41,13 @@ namespace Facturación_de_proyectos_y_productos
 
                 SqlConnection conexion = new SqlConnection();
 
-                //Definimos la cadena de conexion a la base de datos.
+                
                 conexion.ConnectionString = "Data Source=(localdb)\\SQLEXPRESS;Initial Catalog=TPI;Integrated Security=True";
 
-                //La sentencia try...catch nos permite "atrapar" excepciones (Errores) y dar al usuario un mensaje más amigable.
+                
                 try
                 {
-                    //String NombreBarrio = BoxBarrio.Text;
+                    
 
                     //Abrimos la conexion a la base de datos.
                     conexion.Open();
@@ -64,8 +64,7 @@ namespace Facturación_de_proyectos_y_productos
                
 
 
-                    // El metodo ExecuteReader retorna un objeto SqlDataReader con la respuesta de la base de datos. 
-                    // Con SqlDataReader los datos se leen fila por fila, cambiando de fila cada vez que se ejecuta el metodo Read()
+                    
                     try
                     {
                         command.ExecuteNonQuery();
@@ -81,12 +80,12 @@ namespace Facturación_de_proyectos_y_productos
                 }
                 catch (SqlException ex)
                 {
-                    //Mostramos un mensaje de error indicando que hubo un error en la base de datos.
+                    
                     MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
-                    //Preguntamos si el estado de la conexion es abierto antes de cerrar la conexion.
+                    
                     if (conexion.State == ConnectionState.Open)
                     {
                         //Cerramos la conexion
