@@ -69,7 +69,7 @@
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(123, 23);
             this.Return.TabIndex = 5;
-            this.Return.Text = "Volver al menu";
+            this.Return.Text = "Volver a la consulta";
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 

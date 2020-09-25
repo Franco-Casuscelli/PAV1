@@ -18,6 +18,8 @@ namespace Facturación_de_proyectos_y_productos
         public ConsultarBarrio()
         {
             InitializeComponent();
+            btnModificar.Enabled = false;
+            BtnEliminar.Enabled = false;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,8 +38,12 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
-                SqlConnection conexion = new SqlConnection();
+
+            btnModificar.Enabled = true;
+            BtnEliminar.Enabled = true;
+
+
+            SqlConnection conexion = new SqlConnection();
 
                 
                 conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
@@ -118,7 +124,10 @@ namespace Facturación_de_proyectos_y_productos
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
+
         {
+
+            
             String datoID = this.dataGridView.CurrentCell.Value.ToString();
             
 
