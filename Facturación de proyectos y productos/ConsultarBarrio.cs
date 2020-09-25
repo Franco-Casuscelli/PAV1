@@ -48,10 +48,12 @@ namespace Facturación_de_proyectos_y_productos
                     //Abrimos la conexion a la base de datos.
                     conexion.Open();
 
+                if (CheckListado.Checked)
+                {
                     //Construimos la consulta sql para buscar el usuario en la base de datos.
                     String consultaSql = string.Concat(" SELECT * ",
                                                        "   FROM Barrios ",
-                                                       "  WHERE nombre LIKE '%"+this.TextConsultaBarrio.Text+"%' ");
+                                                       "  WHERE nombre LIKE '%" + this.TextConsultaBarrio.Text + "%' ");
 
                     //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
                     SqlCommand command = new SqlCommand(consultaSql, conexion);
@@ -62,11 +64,32 @@ namespace Facturación_de_proyectos_y_productos
                     reader.Fill(tabla);
 
                     dataGridView.DataSource = tabla;
-                    
-                   
-                    
+                }
+                else
+                {
+
+
+                    //Construimos la consulta sql para buscar el usuario en la base de datos.
+                    String consultaSql = string.Concat(" SELECT * ",
+                                                       "   FROM Barrios ",
+                                                       "  WHERE (nombre LIKE '%" + this.TextConsultaBarrio.Text + "%') AND (borrado = 0) ");
+
+                    //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
+                    SqlCommand command = new SqlCommand(consultaSql, conexion);
+
+                    SqlDataAdapter reader = new SqlDataAdapter(command);
+
+                    DataTable tabla = new DataTable();
+                    reader.Fill(tabla);
+
+                    dataGridView.DataSource = tabla;
+
 
                 }
+
+
+
+            }
                 catch (SqlException ex)
                 {
                     
@@ -162,6 +185,11 @@ namespace Facturación_de_proyectos_y_productos
         
 
 
+
+        }
+
+        private void CheckListado_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

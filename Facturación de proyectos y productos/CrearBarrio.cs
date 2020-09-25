@@ -89,6 +89,7 @@ namespace Facturación_de_proyectos_y_productos
                                 command.ExecuteNonQuery();
 
                                 MessageBox.Show("Creado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                BoxBarrio.Text = "";
                                 return;
                             }
                             catch (Exception ex)

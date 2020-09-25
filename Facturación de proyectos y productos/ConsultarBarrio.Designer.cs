@@ -36,12 +36,13 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.lblFila = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
+            this.CheckListado = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(152, 111);
+            this.btnBuscar.Location = new System.Drawing.Point(152, 97);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
@@ -52,7 +53,7 @@
             // lblBuscarBarrio
             // 
             this.lblBuscarBarrio.AutoSize = true;
-            this.lblBuscarBarrio.Location = new System.Drawing.Point(101, 58);
+            this.lblBuscarBarrio.Location = new System.Drawing.Point(130, 32);
             this.lblBuscarBarrio.Name = "lblBuscarBarrio";
             this.lblBuscarBarrio.Size = new System.Drawing.Size(126, 13);
             this.lblBuscarBarrio.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // TextConsultaBarrio
             // 
-            this.TextConsultaBarrio.Location = new System.Drawing.Point(100, 74);
+            this.TextConsultaBarrio.Location = new System.Drawing.Point(104, 48);
             this.TextConsultaBarrio.Name = "TextConsultaBarrio";
             this.TextConsultaBarrio.Size = new System.Drawing.Size(178, 20);
             this.TextConsultaBarrio.TabIndex = 2;
@@ -114,12 +115,24 @@
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
+            // CheckListado
+            // 
+            this.CheckListado.AutoSize = true;
+            this.CheckListado.Location = new System.Drawing.Point(104, 74);
+            this.CheckListado.Name = "CheckListado";
+            this.CheckListado.Size = new System.Drawing.Size(106, 17);
+            this.CheckListado.TabIndex = 9;
+            this.CheckListado.Text = "Mostrar Borrados";
+            this.CheckListado.UseVisualStyleBackColor = true;
+            this.CheckListado.CheckedChanged += new System.EventHandler(this.CheckListado_CheckedChanged);
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.CheckListado);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.lblFila);
             this.Controls.Add(this.btnModificar);
@@ -148,5 +161,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblFila;
         private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.CheckBox CheckListado;
     }
 }
