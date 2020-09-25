@@ -1,0 +1,387 @@
+﻿namespace Facturación_de_proyectos_y_productos
+{
+    partial class AltaFacturas
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.TipoFact = new System.Windows.Forms.Label();
+            this.BoxTipoFact = new System.Windows.Forms.ComboBox();
+            this.BoxCliente = new System.Windows.Forms.ComboBox();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.NumFactura = new System.Windows.Forms.Label();
+            this.txtNumeroFactura = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.dataFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblCuit = new System.Windows.Forms.Label();
+            this.txtCuit = new System.Windows.Forms.TextBox();
+            this.lblArticulo = new System.Windows.Forms.Label();
+            this.BoxProducto = new System.Windows.Forms.ComboBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.boxCantidad = new System.Windows.Forms.TextBox();
+            this.lblPrecioProducto = new System.Windows.Forms.Label();
+            this.BoxPrecioProducto = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDetalle = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblImporte = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // TipoFact
+            // 
+            this.TipoFact.AutoSize = true;
+            this.TipoFact.Location = new System.Drawing.Point(36, 37);
+            this.TipoFact.Name = "TipoFact";
+            this.TipoFact.Size = new System.Drawing.Size(67, 13);
+            this.TipoFact.TabIndex = 0;
+            this.TipoFact.Text = "Tipo de Fact";
+            // 
+            // BoxTipoFact
+            // 
+            this.BoxTipoFact.FormattingEnabled = true;
+            this.BoxTipoFact.Location = new System.Drawing.Point(109, 34);
+            this.BoxTipoFact.Name = "BoxTipoFact";
+            this.BoxTipoFact.Size = new System.Drawing.Size(113, 21);
+            this.BoxTipoFact.TabIndex = 1;
+            // 
+            // BoxCliente
+            // 
+            this.BoxCliente.FormattingEnabled = true;
+            this.BoxCliente.Location = new System.Drawing.Point(109, 74);
+            this.BoxCliente.Name = "BoxCliente";
+            this.BoxCliente.Size = new System.Drawing.Size(113, 21);
+            this.BoxCliente.TabIndex = 3;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(36, 77);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
+            this.lblCliente.TabIndex = 2;
+            this.lblCliente.Text = "Cliente";
+            // 
+            // NumFactura
+            // 
+            this.NumFactura.AutoSize = true;
+            this.NumFactura.Location = new System.Drawing.Point(250, 37);
+            this.NumFactura.Name = "NumFactura";
+            this.NumFactura.Size = new System.Drawing.Size(53, 13);
+            this.NumFactura.TabIndex = 4;
+            this.NumFactura.Text = "Num Fact";
+            // 
+            // txtNumeroFactura
+            // 
+            this.txtNumeroFactura.Location = new System.Drawing.Point(309, 34);
+            this.txtNumeroFactura.Name = "txtNumeroFactura";
+            this.txtNumeroFactura.Size = new System.Drawing.Size(113, 20);
+            this.txtNumeroFactura.TabIndex = 5;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(250, 77);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.TabIndex = 6;
+            this.lblDireccion.Text = "Dirección";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(308, 74);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(114, 20);
+            this.txtDireccion.TabIndex = 7;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(459, 37);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(37, 13);
+            this.lblFecha.TabIndex = 8;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // dataFecha
+            // 
+            this.dataFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dataFecha.Location = new System.Drawing.Point(502, 34);
+            this.dataFecha.Name = "dataFecha";
+            this.dataFecha.Size = new System.Drawing.Size(114, 20);
+            this.dataFecha.TabIndex = 9;
+            // 
+            // lblCuit
+            // 
+            this.lblCuit.AutoSize = true;
+            this.lblCuit.Location = new System.Drawing.Point(459, 77);
+            this.lblCuit.Name = "lblCuit";
+            this.lblCuit.Size = new System.Drawing.Size(32, 13);
+            this.lblCuit.TabIndex = 10;
+            this.lblCuit.Text = "CUIT";
+            // 
+            // txtCuit
+            // 
+            this.txtCuit.Location = new System.Drawing.Point(502, 74);
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(114, 20);
+            this.txtCuit.TabIndex = 11;
+            // 
+            // lblArticulo
+            // 
+            this.lblArticulo.AutoSize = true;
+            this.lblArticulo.Location = new System.Drawing.Point(61, 168);
+            this.lblArticulo.Name = "lblArticulo";
+            this.lblArticulo.Size = new System.Drawing.Size(42, 13);
+            this.lblArticulo.TabIndex = 13;
+            this.lblArticulo.Text = "Articulo";
+            // 
+            // BoxProducto
+            // 
+            this.BoxProducto.FormattingEnabled = true;
+            this.BoxProducto.Location = new System.Drawing.Point(109, 164);
+            this.BoxProducto.Name = "BoxProducto";
+            this.BoxProducto.Size = new System.Drawing.Size(168, 21);
+            this.BoxProducto.TabIndex = 15;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(305, 168);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.TabIndex = 16;
+            this.lblCantidad.Text = "Cantidad";
+            // 
+            // boxCantidad
+            // 
+            this.boxCantidad.Location = new System.Drawing.Point(365, 164);
+            this.boxCantidad.Name = "boxCantidad";
+            this.boxCantidad.Size = new System.Drawing.Size(88, 20);
+            this.boxCantidad.TabIndex = 17;
+            // 
+            // lblPrecioProducto
+            // 
+            this.lblPrecioProducto.AutoSize = true;
+            this.lblPrecioProducto.Location = new System.Drawing.Point(471, 168);
+            this.lblPrecioProducto.Name = "lblPrecioProducto";
+            this.lblPrecioProducto.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecioProducto.TabIndex = 18;
+            this.lblPrecioProducto.Text = "Precio";
+            // 
+            // BoxPrecioProducto
+            // 
+            this.BoxPrecioProducto.Location = new System.Drawing.Point(514, 165);
+            this.BoxPrecioProducto.Name = "BoxPrecioProducto";
+            this.BoxPrecioProducto.Size = new System.Drawing.Size(88, 20);
+            this.BoxPrecioProducto.TabIndex = 19;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(440, 212);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 22;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(527, 212);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.BtnEliminar.TabIndex = 23;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dataGridView1.Location = new System.Drawing.Point(60, 259);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(542, 231);
+            this.dataGridView1.TabIndex = 24;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Num Fact";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cod Art";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Descripcion";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cantidad";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.Name = "Column5";
+            // 
+            // lblDetalle
+            // 
+            this.lblDetalle.AutoSize = true;
+            this.lblDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetalle.Location = new System.Drawing.Point(286, 128);
+            this.lblDetalle.Name = "lblDetalle";
+            this.lblDetalle.Size = new System.Drawing.Size(91, 13);
+            this.lblDetalle.TabIndex = 25;
+            this.lblDetalle.Text = "Detalle de factura";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(514, 517);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(88, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // lblImporte
+            // 
+            this.lblImporte.AutoSize = true;
+            this.lblImporte.Location = new System.Drawing.Point(439, 520);
+            this.lblImporte.Name = "lblImporte";
+            this.lblImporte.Size = new System.Drawing.Size(69, 13);
+            this.lblImporte.TabIndex = 26;
+            this.lblImporte.Text = "Importe Total";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(184, 574);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(119, 26);
+            this.btnGuardar.TabIndex = 28;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(355, 574);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(119, 26);
+            this.btnSalir.TabIndex = 29;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // AltaFacturas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(659, 626);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblImporte);
+            this.Controls.Add(this.lblDetalle);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.BtnEliminar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.BoxPrecioProducto);
+            this.Controls.Add(this.lblPrecioProducto);
+            this.Controls.Add(this.boxCantidad);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.BoxProducto);
+            this.Controls.Add(this.lblArticulo);
+            this.Controls.Add(this.txtCuit);
+            this.Controls.Add(this.lblCuit);
+            this.Controls.Add(this.dataFecha);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.txtNumeroFactura);
+            this.Controls.Add(this.NumFactura);
+            this.Controls.Add(this.BoxCliente);
+            this.Controls.Add(this.lblCliente);
+            this.Controls.Add(this.BoxTipoFact);
+            this.Controls.Add(this.TipoFact);
+            this.Name = "AltaFacturas";
+            this.Text = "Crear nueva factura";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label TipoFact;
+        private System.Windows.Forms.ComboBox BoxTipoFact;
+        private System.Windows.Forms.ComboBox BoxCliente;
+        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Label NumFactura;
+        private System.Windows.Forms.TextBox txtNumeroFactura;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.DateTimePicker dataFecha;
+        private System.Windows.Forms.Label lblCuit;
+        private System.Windows.Forms.TextBox txtCuit;
+        private System.Windows.Forms.Label lblArticulo;
+        private System.Windows.Forms.ComboBox BoxProducto;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.TextBox boxCantidad;
+        private System.Windows.Forms.Label lblPrecioProducto;
+        private System.Windows.Forms.TextBox BoxPrecioProducto;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label lblDetalle;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblImporte;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnSalir;
+    }
+}

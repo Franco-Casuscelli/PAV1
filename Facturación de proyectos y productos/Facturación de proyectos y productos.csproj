@@ -79,6 +79,12 @@
     <Compile Include="EliminarBarrio.Designer.cs">
       <DependentUpon>EliminarBarrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearFacturas.Designer.cs">
+      <DependentUpon>CrearFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarBarrio.resx">
       <DependentUpon>EliminarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearFacturas.resx">
+      <DependentUpon>CrearFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarBarrio.resx">
       <DependentUpon>ModificarBarrio.cs</DependentUpon>
