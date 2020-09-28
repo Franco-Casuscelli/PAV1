@@ -110,6 +110,7 @@
             this.BoxResponsable.Name = "BoxResponsable";
             this.BoxResponsable.Size = new System.Drawing.Size(168, 21);
             this.BoxResponsable.TabIndex = 9;
+            this.BoxResponsable.SelectedIndexChanged += new System.EventHandler(this.BoxResponsable_SelectedIndexChanged);
             // 
             // btnCrear
             // 
