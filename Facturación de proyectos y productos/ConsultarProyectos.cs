@@ -232,5 +232,24 @@ namespace Facturación_de_proyectos_y_productos
                 }
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.Rows.Count == 1)
+            {
+                MessageBox.Show("No se encuentra proyecto a modificar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+
+            }
+            else
+            {
+                String datoID = this.dataGridView.CurrentCell.Value.ToString();
+
+                Form formulario = new ModificarProyecto(datoID);
+
+                formulario.ShowDialog();
+
+            }
+        }
     }
 }

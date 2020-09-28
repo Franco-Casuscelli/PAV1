@@ -97,6 +97,12 @@
     <Compile Include="ConsultarProyectos.Designer.cs">
       <DependentUpon>ConsultarProyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarProyecto.Designer.cs">
+      <DependentUpon>ModificarProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarProyectos.resx">
       <DependentUpon>ConsultarProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarProyecto.resx">
+      <DependentUpon>ModificarProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarBarrio.resx">
       <DependentUpon>ModificarBarrio.cs</DependentUpon>
