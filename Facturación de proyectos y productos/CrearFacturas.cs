@@ -116,5 +116,47 @@ namespace Facturación_de_proyectos_y_productos
                 this.Close();
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if((BoxProducto.Text == "") || (BoxPrecioProducto.Text == ""))
+            {
+                MessageBox.Show("Por favor ingrese un Proyecto y/o Precio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                SqlConnection conexion = new SqlConnection();
+                conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                try
+                {
+                    conexion.Open();
+
+                    String consultaSqlNombreRepetido = "Select * From Proyectos where id_proyecto = '" + this.BoxProducto.Text + "'";
+                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
+
+                    SqlDataAdapter reader = new SqlDataAdapter(command);
+
+                    DataTable tabla = new DataTable();
+                    reader.Fill(tabla);
+
+                    dataGridView.DataSource = tabla;
+
+                    //dataGridView.Rows.Add(reader.Read());
+                }
+
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (conexion.State == ConnectionState.Open)
+                    {
+                        conexion.Close();
+                    }
+                }
+            }
+        }
     }
 }
