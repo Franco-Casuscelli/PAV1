@@ -173,6 +173,7 @@
             this.Name = "CrearProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Crear Proyecto";
+            this.Load += new System.EventHandler(this.CrearProyecto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

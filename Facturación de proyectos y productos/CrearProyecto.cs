@@ -16,7 +16,7 @@ namespace Facturación_de_proyectos_y_productos
         public CrearProyecto()
         {
             InitializeComponent();
-            string IdProducto = "None";
+            
 
 
 
@@ -247,6 +247,11 @@ namespace Facturación_de_proyectos_y_productos
 
 
 
+
+        }
+
+        private void CrearProyecto_Load(object sender, EventArgs e)
+        {
 
         }
     }

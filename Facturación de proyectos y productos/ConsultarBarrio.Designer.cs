@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblBuscarBarrio = new System.Windows.Forms.Label();
             this.TextConsultaBarrio = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.lblFila = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.CheckListado = new System.Windows.Forms.CheckBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +128,11 @@
             this.CheckListado.UseVisualStyleBackColor = true;
             this.CheckListado.CheckedChanged += new System.EventHandler(this.CheckListado_CheckedChanged);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,5 +169,6 @@
         private System.Windows.Forms.Label lblFila;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.CheckBox CheckListado;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

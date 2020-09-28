@@ -46,7 +46,6 @@
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,8 +179,7 @@
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem3,
-            this.consultarToolStripMenuItem3,
-            this.eliminarToolStripMenuItem3});
+            this.consultarToolStripMenuItem3});
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
@@ -198,12 +196,7 @@
             this.consultarToolStripMenuItem3.Name = "consultarToolStripMenuItem3";
             this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem3.Text = "Consultar";
-            // 
-            // eliminarToolStripMenuItem3
-            // 
-            this.eliminarToolStripMenuItem3.Name = "eliminarToolStripMenuItem3";
-            this.eliminarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-            this.eliminarToolStripMenuItem3.Text = "Eliminar";
+            this.consultarToolStripMenuItem3.Click += new System.EventHandler(this.consultarToolStripMenuItem3_Click);
             // 
             // facturasToolStripMenuItem
             // 
@@ -217,13 +210,13 @@
             // crearToolStripMenuItem4
             // 
             this.crearToolStripMenuItem4.Name = "crearToolStripMenuItem4";
-            this.crearToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.crearToolStripMenuItem4.Size = new System.Drawing.Size(125, 22);
             this.crearToolStripMenuItem4.Text = "Crear";
             // 
             // consultarToolStripMenuItem4
             // 
             this.consultarToolStripMenuItem4.Name = "consultarToolStripMenuItem4";
-            this.consultarToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem4.Size = new System.Drawing.Size(125, 22);
             this.consultarToolStripMenuItem4.Text = "Consultar";
             // 
             // ayudaToolStripMenuItem
@@ -307,7 +300,6 @@
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AcercaDe;
         private System.Windows.Forms.Label txtMenu;
