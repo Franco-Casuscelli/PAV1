@@ -112,7 +112,8 @@ namespace Facturación_de_proyectos_y_productos
                 BtnEliminar.Enabled = false;
                 return;
             }
-
+            
+            
             if (CheckListado.Checked)
             {
                 
@@ -132,10 +133,13 @@ namespace Facturación_de_proyectos_y_productos
                 reader.Fill(tabla);
 
                 dataGridView.DataSource = tabla;
+                dataGridView.Columns.Remove("id_producto");
+                dataGridView.Columns.Remove("id_responsable");
 
             }
             else
             {
+                
                 //Construimos la consulta sql para buscar el usuario en la base de datos.
                 String consultaSql = string.Concat(" SELECT * ",
                                                    "   FROM Proyectos ",
@@ -151,7 +155,10 @@ namespace Facturación_de_proyectos_y_productos
                 DataTable tabla = new DataTable();
                 reader.Fill(tabla);
 
+
                 dataGridView.DataSource = tabla;
+                dataGridView.Columns.Remove("id_producto");
+                dataGridView.Columns.Remove("id_responsable");
             }
         }
 
