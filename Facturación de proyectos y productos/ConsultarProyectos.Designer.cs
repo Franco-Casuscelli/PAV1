@@ -58,11 +58,12 @@
             this.BtnEliminar.TabIndex = 17;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // lblFila
             // 
             this.lblFila.AutoSize = true;
-            this.lblFila.Location = new System.Drawing.Point(12, 139);
+            this.lblFila.Location = new System.Drawing.Point(9, 139);
             this.lblFila.Name = "lblFila";
             this.lblFila.Size = new System.Drawing.Size(79, 13);
             this.lblFila.TabIndex = 16;

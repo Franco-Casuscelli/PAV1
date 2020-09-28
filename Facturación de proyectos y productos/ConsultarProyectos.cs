@@ -166,5 +166,71 @@ namespace Facturación_de_proyectos_y_productos
         {
             this.Close();
         }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.Rows.Count == 1)
+            {
+                MessageBox.Show("No se encuentra proyecto a eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+
+            }
+            else
+            {
+
+
+
+                String datoID = this.dataGridView.CurrentCell.Value.ToString();
+
+
+                if (MessageBox.Show("¿Esta seguro que desea Eliminar este proyecto?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    SqlConnection conexion = new SqlConnection();
+
+
+                    conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+
+                    try
+                    {
+
+                        conexion.Open();
+
+
+                        String cambio = "UPDATE dbo.Proyectos SET borrado = @Borrado WHERE id_proyecto = @valor";
+
+                        SqlCommand comando = new SqlCommand(cambio, conexion);
+
+                        comando.Parameters.AddWithValue("@valor", datoID);
+                        comando.Parameters.AddWithValue("@Borrado", 1);
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Eliminado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+
+
+                    catch (SqlException ex)
+                    {
+
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+
+                        if (conexion.State == ConnectionState.Open)
+                        {
+                            //Cerramos la conexion
+                            conexion.Close();
+                        }
+                    }
+
+
+
+                }
+            }
+        }
     }
 }
