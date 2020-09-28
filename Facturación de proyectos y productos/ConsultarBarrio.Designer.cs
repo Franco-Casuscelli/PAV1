@@ -152,6 +152,7 @@
             this.Name = "ConsultarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consultar Barrios";
+            this.Load += new System.EventHandler(this.ConsultarBarrio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

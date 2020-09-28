@@ -80,5 +80,11 @@ namespace Facturación_de_proyectos_y_productos
             Form formulario = new ConsultarProyectos();
             formulario.ShowDialog();
         }
+
+        private void crearToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form formulario = new CrearFacturas();
+            formulario.ShowDialog();
+        }
     }
 }
