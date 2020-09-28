@@ -47,13 +47,13 @@
             this.crearToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.txtMenu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,20 +189,42 @@
             // crearToolStripMenuItem3
             // 
             this.crearToolStripMenuItem3.Name = "crearToolStripMenuItem3";
-            this.crearToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
+            this.crearToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.crearToolStripMenuItem3.Text = "Crear";
+            this.crearToolStripMenuItem3.Click += new System.EventHandler(this.crearToolStripMenuItem3_Click);
             // 
             // consultarToolStripMenuItem3
             // 
             this.consultarToolStripMenuItem3.Name = "consultarToolStripMenuItem3";
-            this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem3.Text = "Consultar";
             // 
             // eliminarToolStripMenuItem3
             // 
             this.eliminarToolStripMenuItem3.Name = "eliminarToolStripMenuItem3";
-            this.eliminarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
+            this.eliminarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.eliminarToolStripMenuItem3.Text = "Eliminar";
+            // 
+            // facturasToolStripMenuItem
+            // 
+            this.facturasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearToolStripMenuItem4,
+            this.consultarToolStripMenuItem4});
+            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturasToolStripMenuItem.Text = "Facturas";
+            // 
+            // crearToolStripMenuItem4
+            // 
+            this.crearToolStripMenuItem4.Name = "crearToolStripMenuItem4";
+            this.crearToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.crearToolStripMenuItem4.Text = "Crear";
+            // 
+            // consultarToolStripMenuItem4
+            // 
+            this.consultarToolStripMenuItem4.Name = "consultarToolStripMenuItem4";
+            this.consultarToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem4.Text = "Consultar";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -241,27 +263,6 @@
             this.label1.Size = new System.Drawing.Size(268, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Facturación de proyectos y productos";
-            // 
-            // facturasToolStripMenuItem
-            // 
-            this.facturasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearToolStripMenuItem4,
-            this.consultarToolStripMenuItem4});
-            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.facturasToolStripMenuItem.Text = "Facturas";
-            // 
-            // crearToolStripMenuItem4
-            // 
-            this.crearToolStripMenuItem4.Name = "crearToolStripMenuItem4";
-            this.crearToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.crearToolStripMenuItem4.Text = "Crear";
-            // 
-            // consultarToolStripMenuItem4
-            // 
-            this.consultarToolStripMenuItem4.Name = "consultarToolStripMenuItem4";
-            this.consultarToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.consultarToolStripMenuItem4.Text = "Consultar";
             // 
             // FormPrincipal
             // 

@@ -85,6 +85,12 @@
     <Compile Include="CrearFacturas.Designer.cs">
       <DependentUpon>CrearFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearProyecto.Designer.cs">
+      <DependentUpon>CrearProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearFacturas.resx">
       <DependentUpon>CrearFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearProyecto.resx">
+      <DependentUpon>CrearProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarBarrio.resx">
       <DependentUpon>ModificarBarrio.cs</DependentUpon>

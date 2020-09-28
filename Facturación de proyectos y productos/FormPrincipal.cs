@@ -68,6 +68,11 @@ namespace Facturación_de_proyectos_y_productos
         {
             
         }
-    
+
+        private void crearToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form formulario = new CrearProyecto();
+            formulario.ShowDialog();
+        }
     }
 }

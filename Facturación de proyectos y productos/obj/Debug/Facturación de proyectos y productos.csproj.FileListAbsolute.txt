@@ -48,3 +48,5 @@ C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Deb
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CoreCompileInputs.cache
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
+C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.AltaFacturas.resources
+C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearProyecto.resources
