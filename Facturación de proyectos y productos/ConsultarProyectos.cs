@@ -19,6 +19,8 @@ namespace Facturación_de_proyectos_y_productos
             btnModificar.Enabled = false;
             BtnEliminar.Enabled = false;
 
+            dataGridView.AllowUserToAddRows = false;
+
 
             // llenamos el combo box de producto
 
@@ -250,6 +252,11 @@ namespace Facturación_de_proyectos_y_productos
                 formulario.ShowDialog();
 
             }
+        }
+
+        private void ConsultarProyectos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

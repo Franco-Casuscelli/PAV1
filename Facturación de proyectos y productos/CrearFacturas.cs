@@ -170,6 +170,14 @@ namespace Facturación_de_proyectos_y_productos
                         BoxProducto.Text = "";
                         BoxPrecioProducto.Text = "";
 
+
+                        reader.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encuentra el numero del proyecto ingresado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        BoxProducto.Text = "";
+                        BoxPrecioProducto.Text = "";
                     }
                     reader.Close();
 
@@ -210,6 +218,24 @@ namespace Facturación_de_proyectos_y_productos
                 btnGuardar.Enabled = false;
             }
           
+        }
+
+        private void BoxPrecioProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BoxPrecioProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+            
         }
     }
 }

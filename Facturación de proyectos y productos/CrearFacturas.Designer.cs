@@ -179,6 +179,8 @@
             this.BoxPrecioProducto.Name = "BoxPrecioProducto";
             this.BoxPrecioProducto.Size = new System.Drawing.Size(88, 20);
             this.BoxPrecioProducto.TabIndex = 19;
+            this.BoxPrecioProducto.TextChanged += new System.EventHandler(this.BoxPrecioProducto_TextChanged);
+            this.BoxPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxPrecioProducto_KeyPress);
             // 
             // btnAgregar
             // 
