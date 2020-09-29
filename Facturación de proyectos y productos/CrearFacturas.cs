@@ -13,9 +13,26 @@ namespace Facturación_de_proyectos_y_productos
 {
     public partial class CrearFacturas : Form
     {
+
+        private DataTable dt;
+
         public CrearFacturas()
         {
+
+
             InitializeComponent();
+
+            dt = new DataTable();
+            dt.Columns.Add("Proyecto");
+            dt.Columns.Add("Descripcion");
+            dt.Columns.Add("Version");
+            dt.Columns.Add("Alcance");
+            dt.Columns.Add("Precio");
+
+
+            dataGrid.DataSource = dt;
+
+
             txtNumeroFactura.Enabled = false;
             txtDireccion.Enabled = false;
             txtCuit.Enabled = false;
@@ -135,12 +152,24 @@ namespace Facturación_de_proyectos_y_productos
                     String consultaSqlNombreRepetido = "Select * From Proyectos where id_proyecto = '" + this.BoxProducto.Text + "'";
                     SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
 
-                    SqlDataAdapter reader = new SqlDataAdapter(command);
+                    
 
-                    DataTable tabla = new DataTable();
-                    reader.Fill(tabla);
+                    SqlDataReader reader = command.ExecuteReader();
 
-                    dataGridView.DataSource = tabla;
+                    if (reader.Read())
+                    {
+                        DataRow row = dt.NewRow();
+
+                        row["Proyecto"] = reader["id_proyecto"].ToString();
+                        row["Descripcion"] = reader["descripcion"].ToString();
+                        row["Version"] = reader["version"].ToString();
+                        row["Alcance"] = reader["alcance"].ToString();
+                        row["Precio"] = BoxPrecioProducto.Text;
+
+                        dt.Rows.Add(row);
+
+                    }
+                    reader.Close();
 
                     //dataGridView.Rows.Add(reader.Read());
                 }

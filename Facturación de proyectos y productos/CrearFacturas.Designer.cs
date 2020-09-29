@@ -45,14 +45,14 @@
             this.BoxPrecioProducto = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblImporte = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblPrecioProducto = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // TipoFact
@@ -198,13 +198,13 @@
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView
+            // dataGrid
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(60, 259);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(542, 231);
-            this.dataGridView.TabIndex = 24;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(60, 259);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.Size = new System.Drawing.Size(542, 231);
+            this.dataGrid.TabIndex = 24;
             // 
             // lblDetalle
             // 
@@ -266,12 +266,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 626);
+            this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.lblDetalle);
-            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.BoxPrecioProducto);
@@ -294,7 +294,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Crear nueva factura";
             this.Load += new System.EventHandler(this.CrearFacturas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,7 +319,7 @@
         private System.Windows.Forms.TextBox BoxPrecioProducto;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblImporte;
