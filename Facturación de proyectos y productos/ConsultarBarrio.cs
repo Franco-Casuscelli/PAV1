@@ -169,7 +169,6 @@ namespace Facturación_de_proyectos_y_productos
                         MessageBox.Show("Eliminado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
-                    
 
                 
                 catch (SqlException ex)
@@ -187,13 +186,7 @@ namespace Facturación_de_proyectos_y_productos
                     }
                 }
 
-
-
             }
-
-        
-
-
 
         }
 

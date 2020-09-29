@@ -47,11 +47,12 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.lblDetalle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BoxPrecio = new System.Windows.Forms.TextBox();
             this.lblImporte = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblPrecioProducto = new System.Windows.Forms.Label();
+            this.lblFila = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,23 +158,23 @@
             // lblProyecto
             // 
             this.lblProyecto.AutoSize = true;
-            this.lblProyecto.Location = new System.Drawing.Point(57, 190);
+            this.lblProyecto.Location = new System.Drawing.Point(56, 188);
             this.lblProyecto.Name = "lblProyecto";
-            this.lblProyecto.Size = new System.Drawing.Size(77, 13);
+            this.lblProyecto.Size = new System.Drawing.Size(88, 13);
             this.lblProyecto.TabIndex = 13;
-            this.lblProyecto.Text = "ID de proyecto";
+            this.lblProyecto.Text = "Num de proyecto";
             // 
             // BoxProducto
             // 
             this.BoxProducto.FormattingEnabled = true;
-            this.BoxProducto.Location = new System.Drawing.Point(140, 185);
+            this.BoxProducto.Location = new System.Drawing.Point(150, 185);
             this.BoxProducto.Name = "BoxProducto";
             this.BoxProducto.Size = new System.Drawing.Size(88, 21);
             this.BoxProducto.TabIndex = 15;
             // 
             // BoxPrecioProducto
             // 
-            this.BoxPrecioProducto.Location = new System.Drawing.Point(289, 187);
+            this.BoxPrecioProducto.Location = new System.Drawing.Point(299, 187);
             this.BoxPrecioProducto.MaxLength = 10;
             this.BoxPrecioProducto.Name = "BoxPrecioProducto";
             this.BoxPrecioProducto.Size = new System.Drawing.Size(88, 20);
@@ -197,6 +198,7 @@
             this.BtnEliminar.TabIndex = 23;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // dataGrid
             // 
@@ -216,13 +218,13 @@
             this.lblDetalle.TabIndex = 25;
             this.lblDetalle.Text = "Detalle de factura";
             // 
-            // textBox1
+            // BoxPrecio
             // 
-            this.textBox1.Location = new System.Drawing.Point(514, 517);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 20);
-            this.textBox1.TabIndex = 27;
+            this.BoxPrecio.Location = new System.Drawing.Point(514, 517);
+            this.BoxPrecio.MaxLength = 10;
+            this.BoxPrecio.Name = "BoxPrecio";
+            this.BoxPrecio.Size = new System.Drawing.Size(88, 20);
+            this.BoxPrecio.TabIndex = 27;
             // 
             // lblImporte
             // 
@@ -255,21 +257,31 @@
             // lblPrecioProducto
             // 
             this.lblPrecioProducto.AutoSize = true;
-            this.lblPrecioProducto.Location = new System.Drawing.Point(250, 190);
+            this.lblPrecioProducto.Location = new System.Drawing.Point(260, 190);
             this.lblPrecioProducto.Name = "lblPrecioProducto";
             this.lblPrecioProducto.Size = new System.Drawing.Size(37, 13);
             this.lblPrecioProducto.TabIndex = 18;
             this.lblPrecioProducto.Text = "Precio";
+            // 
+            // lblFila
+            // 
+            this.lblFila.AutoSize = true;
+            this.lblFila.Location = new System.Drawing.Point(57, 243);
+            this.lblFila.Name = "lblFila";
+            this.lblFila.Size = new System.Drawing.Size(79, 13);
+            this.lblFila.TabIndex = 30;
+            this.lblFila.Text = "Seleccionar fila";
             // 
             // CrearFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 626);
+            this.Controls.Add(this.lblFila);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BoxPrecio);
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.BtnEliminar);
@@ -321,10 +333,11 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label lblDetalle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox BoxPrecio;
         private System.Windows.Forms.Label lblImporte;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblPrecioProducto;
+        private System.Windows.Forms.Label lblFila;
     }
 }

@@ -15,6 +15,7 @@ namespace Facturación_de_proyectos_y_productos
     {
 
         private DataTable dt;
+        private int Cont;
 
         public CrearFacturas()
         {
@@ -28,7 +29,6 @@ namespace Facturación_de_proyectos_y_productos
             dt.Columns.Add("Version");
             dt.Columns.Add("Alcance");
             dt.Columns.Add("Precio");
-
 
             dataGrid.DataSource = dt;
 
@@ -113,12 +113,6 @@ namespace Facturación_de_proyectos_y_productos
             Cont = Cont + 1;
             txtNumeroFactura.Text = (Formato + Cont);
 
-
-
-
-
-
-
         }
 
         private void CrearFacturas_Load(object sender, EventArgs e)
@@ -136,7 +130,11 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if((BoxProducto.Text == "") || (BoxPrecioProducto.Text == ""))
+
+            BtnEliminar.Enabled = true;
+            btnGuardar.Enabled = true;
+
+            if ((BoxProducto.Text == "") || (BoxPrecioProducto.Text == ""))
             {
                 MessageBox.Show("Por favor ingrese un Proyecto y/o Precio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -150,9 +148,7 @@ namespace Facturación_de_proyectos_y_productos
                     conexion.Open();
 
                     String consultaSqlNombreRepetido = "Select * From Proyectos where id_proyecto = '" + this.BoxProducto.Text + "'";
-                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
-
-                    
+                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);            
 
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -167,6 +163,10 @@ namespace Facturación_de_proyectos_y_productos
                         row["Precio"] = BoxPrecioProducto.Text;
 
                         dt.Rows.Add(row);
+
+                        int temporal = Int16.Parse(BoxPrecioProducto.Text);
+                        Cont = Cont + temporal;
+                        BoxPrecio.Text = Cont.ToString();
 
                     }
                     reader.Close();
@@ -186,6 +186,21 @@ namespace Facturación_de_proyectos_y_productos
                     }
                 }
             }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+            String precioDescontar = this.dataGrid.CurrentRow.Cells[4].Value.ToString();
+
+            int temporal = Int16.Parse(precioDescontar);
+            Cont = Cont - temporal;
+            BoxPrecio.Text = Cont.ToString();
+
+            dataGrid.Rows.Remove(this.dataGrid.CurrentRow);
+
+
+
         }
     }
 }
