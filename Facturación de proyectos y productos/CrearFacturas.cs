@@ -20,7 +20,6 @@ namespace Facturación_de_proyectos_y_productos
         public CrearFacturas()
         {
 
-
             InitializeComponent();
 
             dt = new DataTable();
@@ -31,7 +30,7 @@ namespace Facturación_de_proyectos_y_productos
             dt.Columns.Add("Precio");
 
             dataGrid.DataSource = dt;
-
+            dataGrid.AllowUserToAddRows = false;      
 
             txtNumeroFactura.Enabled = false;
             txtDireccion.Enabled = false;
@@ -168,6 +167,9 @@ namespace Facturación_de_proyectos_y_productos
                         Cont = Cont + temporal;
                         BoxPrecio.Text = Cont.ToString();
 
+                        BoxProducto.Text = "";
+                        BoxPrecioProducto.Text = "";
+
                     }
                     reader.Close();
 
@@ -199,8 +201,15 @@ namespace Facturación_de_proyectos_y_productos
 
             dataGrid.Rows.Remove(this.dataGrid.CurrentRow);
 
+            String Filas = this.dataGrid.Rows.Count.ToString();
+            int FilasINT = Int16.Parse(Filas);
 
-
+            if(FilasINT == 0)
+            {
+                BtnEliminar.Enabled = false;
+                btnGuardar.Enabled = false;
+            }
+          
         }
     }
 }

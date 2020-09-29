@@ -18,6 +18,9 @@ namespace Facturación_de_proyectos_y_productos
         public ConsultarBarrio()
         {
             InitializeComponent();
+
+            dataGridView.AllowUserToAddRows = false;
+
             btnModificar.Enabled = false;
             BtnEliminar.Enabled = false;
         }
