@@ -137,6 +137,7 @@ namespace Facturación_de_proyectos_y_productos
                 dataGridView.DataSource = tabla;
                 dataGridView.Columns.Remove("id_producto");
                 dataGridView.Columns.Remove("id_responsable");
+                dataGridView.Columns.Remove("borrado");
 
             }
             else
@@ -161,6 +162,7 @@ namespace Facturación_de_proyectos_y_productos
                 dataGridView.DataSource = tabla;
                 dataGridView.Columns.Remove("id_producto");
                 dataGridView.Columns.Remove("id_responsable");
+                dataGridView.Columns.Remove("borrado");
             }
         }
 

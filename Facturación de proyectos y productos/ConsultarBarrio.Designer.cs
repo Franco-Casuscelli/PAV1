@@ -83,9 +83,9 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(21, 151);
+            this.dataGridView.Location = new System.Drawing.Point(52, 151);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(342, 174);
+            this.dataGridView.Size = new System.Drawing.Size(283, 174);
             this.dataGridView.TabIndex = 5;
             // 
             // btnModificar
@@ -101,7 +101,7 @@
             // lblFila
             // 
             this.lblFila.AutoSize = true;
-            this.lblFila.Location = new System.Drawing.Point(18, 135);
+            this.lblFila.Location = new System.Drawing.Point(49, 135);
             this.lblFila.Name = "lblFila";
             this.lblFila.Size = new System.Drawing.Size(79, 13);
             this.lblFila.TabIndex = 7;

@@ -73,6 +73,7 @@ namespace Facturación_de_proyectos_y_productos
                     reader.Fill(tabla);
 
                     dataGridView.DataSource = tabla;
+                    dataGridView.Columns.Remove("borrado");
                 }
                 else
                 {
@@ -92,6 +93,7 @@ namespace Facturación_de_proyectos_y_productos
                     reader.Fill(tabla);
 
                     dataGridView.DataSource = tabla;
+                    dataGridView.Columns.Remove("borrado");
 
 
                 }
