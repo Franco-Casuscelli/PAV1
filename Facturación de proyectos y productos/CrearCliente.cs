@@ -275,14 +275,17 @@ namespace Facturación_de_proyectos_y_productos
 
         }
 
+
         private void frmCrearCliente_Load(object sender, EventArgs e)
         {
 
         }
 
+
         private void lblNumero_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

@@ -204,5 +204,10 @@ namespace Facturación_de_proyectos_y_productos
         {
 
         }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -74,4 +74,30 @@ C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Deb
 C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
 C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
 C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.frmCrearCliente.resources
+<<<<<<< HEAD
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.frmCrearCliente.resources
+=======
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\bin\Debug\SQLEXPRESS.mdf
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\bin\Debug\SQLEXPRESS_log.ldf
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.exe.config
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.exe
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.pdb
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csprojAssemblyReference.cache
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.frmCrearCliente.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearBarrio.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarBarrio.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.EliminarBarrio.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearFacturas.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearProyecto.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarProyectos.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarCliente.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarProyecto.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarBarrio.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Login.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.FormPrincipal.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Properties.Resources.resources
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.GenerateResource.cache
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
+C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
+>>>>>>> 7c31a6d484e7d1b9bd181ebcc3b997080073a1e8
