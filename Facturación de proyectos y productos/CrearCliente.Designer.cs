@@ -203,6 +203,7 @@
             this.Controls.Add(this.lblRazonSocial);
             this.Name = "frmCrearCliente";
             this.Text = "Crear Cliente";
+            this.Load += new System.EventHandler(this.frmCrearCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

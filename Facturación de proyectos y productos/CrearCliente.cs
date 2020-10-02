@@ -261,5 +261,10 @@ namespace Facturación_de_proyectos_y_productos
 
             }
         }
+
+        private void frmCrearCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
