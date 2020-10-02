@@ -254,6 +254,11 @@ namespace Facturación_de_proyectos_y_productos
         {
 
         }
+
+        private void BoxProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

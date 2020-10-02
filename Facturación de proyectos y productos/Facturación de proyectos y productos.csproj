@@ -97,6 +97,12 @@
     <Compile Include="ConsultarProyectos.Designer.cs">
       <DependentUpon>ConsultarProyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCliente.Designer.cs">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrearCliente.resx">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearBarrio.resx">
       <DependentUpon>CrearBarrio.cs</DependentUpon>
     </EmbeddedResource>

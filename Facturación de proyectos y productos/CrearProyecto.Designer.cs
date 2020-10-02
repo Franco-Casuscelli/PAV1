@@ -85,6 +85,7 @@
             this.BoxProducto.Name = "BoxProducto";
             this.BoxProducto.Size = new System.Drawing.Size(168, 21);
             this.BoxProducto.TabIndex = 4;
+            this.BoxProducto.SelectedIndexChanged += new System.EventHandler(this.BoxProducto_SelectedIndexChanged);
             // 
             // lblAlcance
             // 
