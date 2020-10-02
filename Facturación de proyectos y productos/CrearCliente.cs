@@ -24,7 +24,7 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion.Open();
 
-                String consultaSqlBarrio = "Select * From Barrios";
+                String consultaSqlBarrio = "Select * From Barrios where borrado = 0";
                 SqlCommand command = new SqlCommand(consultaSqlBarrio, conexion);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -61,7 +61,7 @@ namespace Facturación_de_proyectos_y_productos
 
                 while (reader.Read())
                 {
-                    cmbBarrio.Items.Add(reader["nombre"].ToString());
+                    cmbContacto.Items.Add(reader["nombre"].ToString());
                 }
                 reader.Close();
             }
@@ -171,9 +171,7 @@ namespace Facturación_de_proyectos_y_productos
             {
 
                 SqlConnection conexion3 = new SqlConnection();
-
-
-                conexion.ConnectionString = "Data Source=(localdb)\\SQLEXPRESS;Initial Catalog=TPI;Integrated Security=True";
+                conexion3.ConnectionString = "Data Source=(localdb)\\SQLEXPRESS;Initial Catalog=TPI;Integrated Security=True";
 
 
                 try
@@ -181,7 +179,7 @@ namespace Facturación_de_proyectos_y_productos
 
 
                     //Abrimos la conexion a la base de datos.
-                    conexion.Open();
+                    conexion3.Open();
 
                     String consultaSqlNombreRepetido = "Select * From Clientes where razon_social = '" + this.txtRazonSocial.Text + "' ";
                     SqlCommand command2 = new SqlCommand(consultaSqlNombreRepetido, conexion3);
@@ -192,7 +190,7 @@ namespace Facturación_de_proyectos_y_productos
                     if (reader.Read())
                     {
                         string Cuit = reader["cuit"].ToString();
-                        reader.Close();
+                        
 
                         if (Cuit == txtCuit.Text)
                         {
@@ -201,16 +199,17 @@ namespace Facturación_de_proyectos_y_productos
                             return;
 
                         }
+                        reader.Close();
 
                     }
                     //si llegamos hasta aca no esta repetido entonces cerramos el reader anterior
                     reader.Close();
 
 
-                    String consultaSql = "INSERT INTO dbo.Clientes (cuit,razon_social,borrado,calle,numero,fecha_alta) VALUES (@Cuit,@Razon_social,@Borrado,@Calle,@Numero,@Fecha_alta)";
-
+                    String consultaSql = "INSERT INTO dbo.Clientes (cuit,razon_social,borrado,calle,numero,fecha_alta,id_barrio,id_contacto) VALUES (@Cuit,@Razon_social,@Borrado,@Calle,@Numero,@Fecha_alta,@id_barrio,@id_contacto)";
+                    
                     //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
-                    SqlCommand command = new SqlCommand(consultaSql, conexion);
+                    SqlCommand command = new SqlCommand(consultaSql, conexion3);
 
                     command.Parameters.AddWithValue("@Cuit", txtCuit.Text);
                     command.Parameters.AddWithValue("@Razon_social", txtRazonSocial.Text);
@@ -218,6 +217,8 @@ namespace Facturación_de_proyectos_y_productos
                     command.Parameters.AddWithValue("@Numero", txtNumero.Text);
                     command.Parameters.AddWithValue("@Fecha_alta", dtaFecha.Value);
                     command.Parameters.AddWithValue("@Borrado", 0);
+                    command.Parameters.AddWithValue("@id_barrio", idBarrio);
+                    command.Parameters.AddWithValue("@id_contacto", idContacto);
 
                     try
                     {
@@ -228,6 +229,8 @@ namespace Facturación_de_proyectos_y_productos
                         txtCuit.Text = "";
                         txtNumero.Text = "";
                         txtCalle.Text = "";
+                        cmbBarrio.Text = "";
+                        cmbContacto.Text = "";
 
                         return;
                     }
@@ -260,6 +263,26 @@ namespace Facturación_de_proyectos_y_productos
 
 
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtaFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCrearCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

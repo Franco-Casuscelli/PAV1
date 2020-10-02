@@ -74,3 +74,4 @@ C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Deb
 C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
 C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
 C:\Users\Mateo\Desktop\PAV1-master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.frmCrearCliente.resources
+C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.frmCrearCliente.resources
