@@ -87,9 +87,9 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.Location = new System.Drawing.Point(36, 77);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(39, 13);
+            this.lblCliente.Size = new System.Drawing.Size(50, 13);
             this.lblCliente.TabIndex = 2;
-            this.lblCliente.Text = "Cliente";
+            this.lblCliente.Text = "Contacto";
             // 
             // NumFactura
             // 
@@ -246,6 +246,7 @@
             this.btnGuardar.TabIndex = 28;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnSalir
             // 

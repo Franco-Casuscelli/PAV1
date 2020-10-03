@@ -333,6 +333,10 @@ namespace Facturación_de_proyectos_y_productos
                     txtCuit.Text = reader["cuit"].ToString();
                 }
                 reader.Close();
+                if(txtDireccion.Text == "" || txtCuit.Text == "")
+                {
+                    MessageBox.Show(" El contacto seleccionado no está registado \n por favor cree el cliente previamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
             }
 
@@ -348,6 +352,18 @@ namespace Facturación_de_proyectos_y_productos
                 }
             }
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text == "" || txtCuit.Text == "") 
+            {
+                MessageBox.Show("Seleccione un contacto registrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (BoxTipoFact.Text == "")
+            {
+                MessageBox.Show("Seleccione un tipo de factura", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
