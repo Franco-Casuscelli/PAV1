@@ -80,6 +80,7 @@
             this.BoxCliente.Name = "BoxCliente";
             this.BoxCliente.Size = new System.Drawing.Size(113, 21);
             this.BoxCliente.TabIndex = 3;
+            this.BoxCliente.SelectedIndexChanged += new System.EventHandler(this.BoxCliente_SelectedIndexChanged);
             // 
             // lblCliente
             // 

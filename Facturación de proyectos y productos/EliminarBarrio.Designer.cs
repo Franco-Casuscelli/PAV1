@@ -85,6 +85,7 @@
             this.Name = "EliminarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Eliminar Barrio";
+            this.Load += new System.EventHandler(this.EliminarBarrio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

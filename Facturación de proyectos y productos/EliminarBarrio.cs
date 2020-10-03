@@ -111,5 +111,10 @@ namespace Facturación_de_proyectos_y_productos
             
 
         }
+
+        private void EliminarBarrio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

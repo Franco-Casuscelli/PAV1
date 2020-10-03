@@ -179,5 +179,10 @@ namespace Facturación_de_proyectos_y_productos
                 }
             }
         }
+
+        private void ConsultarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

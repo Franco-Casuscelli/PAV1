@@ -86,6 +86,7 @@
             this.Name = "CrearBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Crear Barrio";
+            this.Load += new System.EventHandler(this.CrearBarrio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

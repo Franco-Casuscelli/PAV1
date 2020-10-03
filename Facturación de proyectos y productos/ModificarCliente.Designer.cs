@@ -182,6 +182,7 @@
             this.Controls.Add(this.lblRazonSocial1);
             this.Name = "ModificarCliente";
             this.Text = "Modificar Cliente";
+            this.Load += new System.EventHandler(this.ModificarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

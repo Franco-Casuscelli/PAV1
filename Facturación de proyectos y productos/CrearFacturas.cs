@@ -112,6 +112,39 @@ namespace Facturación_de_proyectos_y_productos
             Cont = Cont + 1;
             txtNumeroFactura.Text = (Formato + Cont);
 
+            //--------------------------------------------------------------------------
+
+            SqlConnection conexion3 = new SqlConnection();
+            conexion3.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion3.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Contactos";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion3);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    BoxCliente.Items.Add(reader["nombre"].ToString() + " " + reader["apellido"].ToString());
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion3.State == ConnectionState.Open)
+                {
+                    conexion3.Close();
+                }
+            }
+
         }
 
         private void CrearFacturas_Load(object sender, EventArgs e)
@@ -235,6 +268,11 @@ namespace Facturación_de_proyectos_y_productos
             {
                 e.Handled = true;
             }
+            
+        }
+
+        private void BoxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
             
         }
     }

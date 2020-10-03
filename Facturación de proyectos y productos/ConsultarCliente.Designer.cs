@@ -138,6 +138,7 @@
             this.Controls.Add(this.lblCuitCliente);
             this.Name = "ConsultarCliente";
             this.Text = "Consultar Cliente";
+            this.Load += new System.EventHandler(this.ConsultarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

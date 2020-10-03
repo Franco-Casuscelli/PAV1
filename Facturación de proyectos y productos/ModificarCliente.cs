@@ -242,5 +242,10 @@ namespace Facturación_de_proyectos_y_productos
                 this.Close();
             }
         }
+
+        private void ModificarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

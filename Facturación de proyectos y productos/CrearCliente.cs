@@ -265,6 +265,7 @@ namespace Facturación_de_proyectos_y_productos
             }
         }
 
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
