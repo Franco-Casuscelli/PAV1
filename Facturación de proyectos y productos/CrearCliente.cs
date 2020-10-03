@@ -61,7 +61,7 @@ namespace Facturación_de_proyectos_y_productos
 
                 while (reader.Read())
                 {
-                    cmbContacto.Items.Add(reader["nombre"].ToString());
+                    cmbContacto.Items.Add(reader["nombre"].ToString() + " " + reader["apellido"].ToString());
                 }
                 reader.Close();
             }
@@ -122,14 +122,20 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion2.Open();
 
-                String consultaSqlContacto = "Select * From Contactos where nombre = '" + this.cmbContacto.Text + "'";
+                String consultaSqlContacto = "Select * From Contactos";
                 SqlCommand command = new SqlCommand(consultaSqlContacto, conexion2);
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read())
+                while(reader.Read())
                 {
-                    idContacto = reader["id_contacto"].ToString();
+                    String nombreContacto = (reader["nombre"].ToString() + " " + reader["apellido"].ToString());
+
+                    if (cmbContacto.Text == nombreContacto)
+                    {
+                        idContacto = reader["id_contacto"].ToString();
+                    }
+                     
                 }
                 reader.Close();
             }

@@ -16,6 +16,7 @@ namespace Facturación_de_proyectos_y_productos
 
         private DataTable dt;
         private int Cont;
+        private String IDContacto;
 
         public CrearFacturas()
         {
@@ -273,7 +274,80 @@ namespace Facturación_de_proyectos_y_productos
 
         private void BoxCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            txtDireccion.Text = "";
+            txtCuit.Text = "";
+
+            SqlConnection conexion = new SqlConnection();
+            conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Contactos";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    String nombreContacto = (reader["nombre"].ToString() + " " + reader["apellido"].ToString());
+
+                    if(BoxCliente.Text == nombreContacto)
+                    {
+                        IDContacto = reader["id_contacto"].ToString();
+                    }
+                    
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+            //---------------------------
+            SqlConnection conexion2 = new SqlConnection();
+            conexion2.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion2.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Clientes where id_contacto = '"+IDContacto+"'";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion2);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if(reader.Read())
+                {
+                    txtDireccion.Text = reader["calle"].ToString() + " " + reader["numero"].ToString();
+                    txtCuit.Text = reader["cuit"].ToString();
+                }
+                reader.Close();
+
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion2.State == ConnectionState.Open)
+                {
+                    conexion2.Close();
+                }
+            }
+
         }
     }
 }
