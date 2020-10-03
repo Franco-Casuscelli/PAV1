@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 400);
+            this.ClientSize = new System.Drawing.Size(381, 400);
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEliminar);
@@ -137,6 +137,7 @@
             this.Controls.Add(this.txtCuitConsulta);
             this.Controls.Add(this.lblCuitCliente);
             this.Name = "ConsultarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Cliente";
             this.Load += new System.EventHandler(this.ConsultarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaCliente)).EndInit();
