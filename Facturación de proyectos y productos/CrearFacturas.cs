@@ -17,6 +17,10 @@ namespace Facturación_de_proyectos_y_productos
         private DataTable dt;
         private int Cont;
         private String IDContacto;
+        private String ClienteCuit;
+        private String IdResponsable;
+        private String IdFactura;
+        private int NumeroOrden;
 
         public CrearFacturas()
         {
@@ -31,7 +35,7 @@ namespace Facturación_de_proyectos_y_productos
             dt.Columns.Add("Precio");
 
             dataGrid.DataSource = dt;
-            dataGrid.AllowUserToAddRows = false;      
+            dataGrid.AllowUserToAddRows = false;
 
             txtNumeroFactura.Enabled = false;
             txtDireccion.Enabled = false;
@@ -43,7 +47,7 @@ namespace Facturación_de_proyectos_y_productos
             BoxTipoFact.Items.Add("B");
             BoxTipoFact.Items.Add("C");
 
-            String Cont = "0";
+            int Cont = 0;
             String Formato = "2020-0000";
 
 
@@ -94,6 +98,7 @@ namespace Facturación_de_proyectos_y_productos
                 while (reader.Read())
                 {
                     Cont = Cont + 1;
+                    
                 }
                 reader.Close();
 
@@ -111,6 +116,7 @@ namespace Facturación_de_proyectos_y_productos
                 }
             }
             Cont = Cont + 1;
+            NumeroOrden = Cont;
             txtNumeroFactura.Text = (Formato + Cont);
 
             //--------------------------------------------------------------------------
@@ -143,6 +149,38 @@ namespace Facturación_de_proyectos_y_productos
                 if (conexion3.State == ConnectionState.Open)
                 {
                     conexion3.Close();
+                }
+            }
+            //-------------------------------------
+
+            SqlConnection conexion4 = new SqlConnection();
+            conexion4.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion4.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Usuarios";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion4);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    BoxResponsable.Items.Add(reader["usuario"].ToString());
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion4.State == ConnectionState.Open)
+                {
+                    conexion4.Close();
                 }
             }
 
@@ -181,7 +219,7 @@ namespace Facturación_de_proyectos_y_productos
                     conexion.Open();
 
                     String consultaSqlNombreRepetido = "Select * From Proyectos where id_proyecto = '" + this.BoxProducto.Text + "'";
-                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);            
+                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
 
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -246,12 +284,12 @@ namespace Facturación_de_proyectos_y_productos
             String Filas = this.dataGrid.Rows.Count.ToString();
             int FilasINT = Int16.Parse(Filas);
 
-            if(FilasINT == 0)
+            if (FilasINT == 0)
             {
                 BtnEliminar.Enabled = false;
                 btnGuardar.Enabled = false;
             }
-          
+
         }
 
         private void BoxPrecioProducto_TextChanged(object sender, EventArgs e)
@@ -269,11 +307,13 @@ namespace Facturación_de_proyectos_y_productos
             {
                 e.Handled = true;
             }
-            
+
         }
 
         private void BoxCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            
 
             txtDireccion.Text = "";
             txtCuit.Text = "";
@@ -294,11 +334,11 @@ namespace Facturación_de_proyectos_y_productos
                 {
                     String nombreContacto = (reader["nombre"].ToString() + " " + reader["apellido"].ToString());
 
-                    if(BoxCliente.Text == nombreContacto)
+                    if (BoxCliente.Text == nombreContacto)
                     {
                         IDContacto = reader["id_contacto"].ToString();
                     }
-                    
+
                 }
                 reader.Close();
             }
@@ -322,18 +362,18 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion2.Open();
 
-                String consultaSqlNombreRepetido = "Select * From Clientes where id_contacto = '"+IDContacto+"'";
+                String consultaSqlNombreRepetido = "Select * From Clientes where id_contacto = '" + IDContacto + "'";
                 SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion2);
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                if(reader.Read())
+                if (reader.Read())
                 {
                     txtDireccion.Text = reader["calle"].ToString() + " " + reader["numero"].ToString();
                     txtCuit.Text = reader["cuit"].ToString();
                 }
                 reader.Close();
-                if(txtDireccion.Text == "" || txtCuit.Text == "")
+                if (txtDireccion.Text == "" || txtCuit.Text == "")
                 {
                     MessageBox.Show(" El contacto seleccionado no está registado \n por favor cree el cliente previamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -356,7 +396,16 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtDireccion.Text == "" || txtCuit.Text == "") 
+            List<String> proyectos = new List<String>();
+            
+
+            for (int i = 0; i < dataGrid.Rows.Count; i++)
+            {
+                proyectos.Add(dataGrid.Rows[i].Cells[0].ToString());     
+            }
+
+
+            if (txtDireccion.Text == "" || txtCuit.Text == "")
             {
                 MessageBox.Show("Seleccione un contacto registrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -364,6 +413,186 @@ namespace Facturación_de_proyectos_y_productos
             {
                 MessageBox.Show("Seleccione un tipo de factura", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            //buscamos los datos
+
+            SqlConnection conexion2 = new SqlConnection();
+            conexion2.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion2.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Clientes where cuit = '" + this.txtCuit.Text + "'";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion2);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    ClienteCuit = reader["id_cliente"].ToString();
+
+                }
+                reader.Close();
+
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion2.State == ConnectionState.Open)
+                {
+                    conexion2.Close();
+                }
+
+                //-----------------------------------------
+
+                SqlConnection conexion3 = new SqlConnection();
+                conexion3.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                try
+                {
+                    conexion3.Open();
+
+                    String consultaSqlNombreRepetido = "Select * From Usuarios where usuario = '" + this.BoxResponsable.Text + "'";
+                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion3);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        IdResponsable = reader["id_usuario"].ToString();
+
+                    }
+                    reader.Close();
+
+                }
+
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (conexion3.State == ConnectionState.Open)
+                    {
+                        conexion3.Close();
+                    }
+
+                    //arrancamos guardando la Factura
+
+                    SqlConnection conexion = new SqlConnection();
+                    conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                    try
+                    {
+                        conexion.Open();
+
+                        String consultaSqlNombreRepetido = "INSERT INTO dbo.Facturas (numero_factura,id_cliente,fecha,id_usuario_creador,borrado) VALUES (@NumFact,@Cliente,@Fecha,@Responsable,@Borrado)";
+                        SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
+
+                        command.Parameters.AddWithValue("@NumFact", txtNumeroFactura.Text);
+                        command.Parameters.AddWithValue("@Cliente", ClienteCuit);
+                        command.Parameters.AddWithValue("@Fecha", dataFecha.Text);
+                        command.Parameters.AddWithValue("@Responsable", IdResponsable);
+                        command.Parameters.AddWithValue("@Borrado", 0);
+
+                        command.ExecuteNonQuery();
+                    }
+
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion.State == ConnectionState.Open)
+                        {
+                            conexion.Close();
+                        }
+                    }
+
+                    //ahora cargamos el detalle de factura
+
+
+                    SqlConnection conexion5 = new SqlConnection();
+                    conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                    try
+                    {
+                        conexion5.Open();
+
+                        String consultaSqlNombreRepetido = "Select * From Facturas where numero_factura = '" + this.txtNumeroFactura.Text + "'";
+                        SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion5);
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            IdFactura = reader["id_factura"].ToString();
+
+                        }
+                        reader.Close();
+
+                    }
+
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion5.State == ConnectionState.Open)
+                        {
+                            conexion5.Close();
+                        }
+
+                        //-----------------
+
+
+                        SqlConnection conexion4 = new SqlConnection();
+                        conexion4.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                        try
+                        {
+                            conexion4.Open();
+
+                            String consultaSqlNombreRepetido = "INSERT INTO dbo.FacturasDetalle (id_factura,numero_orden,id_proyecto,precio,borrado) VALUES (@id_factura,@numero_orden,@id_proyecto,@precio,@Borrado)";
+                            SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion4);
+
+                            command.Parameters.AddWithValue("@id_factura", IdFactura);
+                            command.Parameters.AddWithValue("@id_proyecto", 1); // VERIFICAR ESTE COMO PASAR LISTADO DE PROYECTOS
+                            command.Parameters.AddWithValue("@numero_orden", NumeroOrden);
+                            command.Parameters.AddWithValue("@precio", BoxPrecio.Text);
+                            command.Parameters.AddWithValue("@Borrado", 0);
+
+                            command.ExecuteNonQuery();
+                            
+
+                        }
+
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            if (conexion4.State == ConnectionState.Open)
+                            {
+                                conexion4.Close();
+                            }
+
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
+
+
+

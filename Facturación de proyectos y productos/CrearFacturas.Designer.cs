@@ -53,6 +53,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblPrecioProducto = new System.Windows.Forms.Label();
             this.lblFila = new System.Windows.Forms.Label();
+            this.BoxResponsable = new System.Windows.Forms.ComboBox();
+            this.lblResponsable = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -276,11 +278,30 @@
             this.lblFila.TabIndex = 30;
             this.lblFila.Text = "Seleccionar fila";
             // 
+            // BoxResponsable
+            // 
+            this.BoxResponsable.FormattingEnabled = true;
+            this.BoxResponsable.Location = new System.Drawing.Point(129, 517);
+            this.BoxResponsable.Name = "BoxResponsable";
+            this.BoxResponsable.Size = new System.Drawing.Size(113, 21);
+            this.BoxResponsable.TabIndex = 32;
+            // 
+            // lblResponsable
+            // 
+            this.lblResponsable.AutoSize = true;
+            this.lblResponsable.Location = new System.Drawing.Point(54, 520);
+            this.lblResponsable.Name = "lblResponsable";
+            this.lblResponsable.Size = new System.Drawing.Size(69, 13);
+            this.lblResponsable.TabIndex = 31;
+            this.lblResponsable.Text = "Responsable";
+            // 
             // CrearFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 626);
+            this.Controls.Add(this.BoxResponsable);
+            this.Controls.Add(this.lblResponsable);
             this.Controls.Add(this.lblFila);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.btnSalir);
@@ -343,5 +364,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblPrecioProducto;
         private System.Windows.Forms.Label lblFila;
+        private System.Windows.Forms.ComboBox BoxResponsable;
+        private System.Windows.Forms.Label lblResponsable;
     }
 }
