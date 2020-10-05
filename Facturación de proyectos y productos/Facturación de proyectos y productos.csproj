@@ -109,6 +109,12 @@
     <Compile Include="ConsultarCliente.Designer.cs">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarFactura.Designer.cs">
+      <DependentUpon>ConsultarFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarProyectos.resx">
       <DependentUpon>ConsultarProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarFactura.resx">
+      <DependentUpon>ConsultarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
