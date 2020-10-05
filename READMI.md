@@ -15,7 +15,6 @@ Integrantes del Grupo:
 --
 - Franco Casuscelli - 67021
 - Mateo Biasotto - 69811
-- Miguel Cespedes - 70590
 
 **Modulo seleccionado**
 --
