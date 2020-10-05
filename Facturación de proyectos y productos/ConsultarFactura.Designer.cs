@@ -70,7 +70,7 @@
             // 
             this.btnAgregar.Location = new System.Drawing.Point(265, 85);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(114, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(129, 23);
             this.btnAgregar.TabIndex = 23;
             this.btnAgregar.Text = "Buscar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@
             // 
             // txtCuit
             // 
-            this.txtCuit.Location = new System.Drawing.Point(504, 190);
+            this.txtCuit.Location = new System.Drawing.Point(488, 190);
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(114, 20);
             this.txtCuit.TabIndex = 29;
@@ -86,7 +86,7 @@
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(461, 193);
+            this.lblCuit.Location = new System.Drawing.Point(450, 193);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(32, 13);
             this.lblCuit.TabIndex = 28;
@@ -94,7 +94,7 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(310, 190);
+            this.txtDireccion.Location = new System.Drawing.Point(302, 190);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(114, 20);
             this.txtDireccion.TabIndex = 27;
@@ -102,7 +102,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(252, 193);
+            this.lblDireccion.Location = new System.Drawing.Point(244, 193);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 26;
@@ -111,7 +111,7 @@
             // lblcontacto
             // 
             this.lblcontacto.AutoSize = true;
-            this.lblcontacto.Location = new System.Drawing.Point(49, 193);
+            this.lblcontacto.Location = new System.Drawing.Point(54, 193);
             this.lblcontacto.Name = "lblcontacto";
             this.lblcontacto.Size = new System.Drawing.Size(39, 13);
             this.lblcontacto.TabIndex = 24;
@@ -119,7 +119,7 @@
             // 
             // BoxCliente
             // 
-            this.BoxCliente.Location = new System.Drawing.Point(94, 190);
+            this.BoxCliente.Location = new System.Drawing.Point(99, 190);
             this.BoxCliente.Name = "BoxCliente";
             this.BoxCliente.Size = new System.Drawing.Size(114, 20);
             this.BoxCliente.TabIndex = 30;
@@ -127,7 +127,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(400, 149);
+            this.lblFecha.Location = new System.Drawing.Point(385, 149);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(96, 13);
             this.lblFecha.TabIndex = 31;
@@ -136,15 +136,15 @@
             // dataFecha
             // 
             this.dataFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataFecha.Location = new System.Drawing.Point(504, 143);
+            this.dataFecha.Location = new System.Drawing.Point(487, 143);
             this.dataFecha.Name = "dataFecha";
-            this.dataFecha.Size = new System.Drawing.Size(114, 20);
+            this.dataFecha.Size = new System.Drawing.Size(115, 20);
             this.dataFecha.TabIndex = 32;
             // 
             // lblResponsable
             // 
             this.lblResponsable.AutoSize = true;
-            this.lblResponsable.Location = new System.Drawing.Point(57, 524);
+            this.lblResponsable.Location = new System.Drawing.Point(54, 524);
             this.lblResponsable.Name = "lblResponsable";
             this.lblResponsable.Size = new System.Drawing.Size(69, 13);
             this.lblResponsable.TabIndex = 37;
@@ -153,33 +153,33 @@
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(60, 260);
+            this.dataGrid.Location = new System.Drawing.Point(57, 260);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(542, 231);
+            this.dataGrid.Size = new System.Drawing.Size(545, 231);
             this.dataGrid.TabIndex = 33;
             // 
             // BoxPrecio
             // 
-            this.BoxPrecio.Location = new System.Drawing.Point(517, 521);
+            this.BoxPrecio.Location = new System.Drawing.Point(489, 521);
             this.BoxPrecio.MaxLength = 10;
             this.BoxPrecio.Name = "BoxPrecio";
-            this.BoxPrecio.Size = new System.Drawing.Size(88, 20);
+            this.BoxPrecio.Size = new System.Drawing.Size(113, 20);
             this.BoxPrecio.TabIndex = 35;
             // 
             // lblImporte
             // 
             this.lblImporte.AutoSize = true;
-            this.lblImporte.Location = new System.Drawing.Point(442, 524);
+            this.lblImporte.Location = new System.Drawing.Point(418, 524);
             this.lblImporte.Name = "lblImporte";
-            this.lblImporte.Size = new System.Drawing.Size(69, 13);
+            this.lblImporte.Size = new System.Drawing.Size(65, 13);
             this.lblImporte.TabIndex = 34;
-            this.lblImporte.Text = "Importe Total";
+            this.lblImporte.Text = "Importe total";
             // 
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalle.Location = new System.Drawing.Point(260, 232);
+            this.lblDetalle.Location = new System.Drawing.Point(285, 234);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(91, 13);
             this.lblDetalle.TabIndex = 39;
@@ -187,7 +187,7 @@
             // 
             // BoxResponsable
             // 
-            this.BoxResponsable.Location = new System.Drawing.Point(132, 521);
+            this.BoxResponsable.Location = new System.Drawing.Point(129, 521);
             this.BoxResponsable.MaxLength = 10;
             this.BoxResponsable.Name = "BoxResponsable";
             this.BoxResponsable.Size = new System.Drawing.Size(113, 20);
@@ -197,7 +197,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(265, 575);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(114, 26);
+            this.btnSalir.Size = new System.Drawing.Size(129, 26);
             this.btnSalir.TabIndex = 42;
             this.btnSalir.Text = "Cerrar";
             this.btnSalir.UseVisualStyleBackColor = true;

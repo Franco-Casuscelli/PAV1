@@ -17,6 +17,9 @@ namespace Facturación_de_proyectos_y_productos
         private String idFactura;
         private String idCliente;
         private String idResponsable;
+        private String idProyecto;
+        private String precio;
+        private int Cont;
 
         public ConsultarFactura()
         {
@@ -85,6 +88,9 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Cont = 0;
+            dt.Clear();
+
             if (BoxNumFact.Text == "")
             {
                 MessageBox.Show("Por favor ingrese un numero de factura", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -115,8 +121,18 @@ namespace Facturación_de_proyectos_y_productos
                     }
                     else
                     {
+                        
+
                         MessageBox.Show("No se encuentra el numero de factura ingresado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        /*
+                        dt.Clear();
                         BoxNumFact.Text = "";
+                        BoxCliente.Text = "";
+                        txtDireccion.Text = "";
+                        txtCuit.Text = "";
+                        BoxResponsable.Text = "";
+                        BoxPrecio.Text = "";
+                        */
                     }
                     reader.Close();
                 }
@@ -242,7 +258,91 @@ namespace Facturación_de_proyectos_y_productos
                     }
                 }
 
+                //-----
 
+                SqlConnection conexion5 = new SqlConnection();
+                conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                try
+                {
+                    conexion5.Open();
+
+                    String consultaSqlNombreRepetido = "Select * From  FacturasDetalle where id_factura = @ID";
+                    SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion5);
+
+                    command.Parameters.AddWithValue("@ID", idFactura);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while(reader.Read())
+                    {
+                        //---
+                        idProyecto = reader["id_proyecto"].ToString();
+                        precio = reader["precio"].ToString();
+
+
+
+                        SqlConnection conexion6 = new SqlConnection();
+                        conexion6.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                        try
+                        {
+                            conexion6.Open();
+
+                            String DatosProyecto = "Select * From Proyectos where id_proyecto = @idProyecto";
+                            SqlCommand command2 = new SqlCommand(DatosProyecto, conexion6);
+
+                            command2.Parameters.AddWithValue("@idProyecto", idProyecto);
+
+                            SqlDataReader reader1 = command2.ExecuteReader();
+
+                            if (reader1.Read())
+                            {
+                                DataRow row = dt.NewRow();
+
+                                row["Proyecto"] = reader1["id_proyecto"].ToString(); 
+                                row["Descripcion"] = reader1["descripcion"].ToString();
+                                row["Version"] = reader1["version"].ToString();
+                                row["Alcance"] = reader1["alcance"].ToString();
+                                row["Precio"] = precio;
+
+                                dt.Rows.Add(row);
+
+                                int temporal = Int16.Parse(precio);
+                                Cont = Cont + temporal;
+                                BoxPrecio.Text = Cont.ToString();
+                            }
+                            reader1.Close();
+                        }
+
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            if (conexion6.State == ConnectionState.Open)
+                            {
+                                conexion6.Close();
+                            }
+                        }
+
+                        //----
+                    }
+                    reader.Close();
+                }
+
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (conexion5.State == ConnectionState.Open)
+                    {
+                        conexion5.Close();
+                    }
+                }
 
 
             }
