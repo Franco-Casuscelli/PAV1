@@ -74,6 +74,7 @@
             this.BoxTipoFact.Name = "BoxTipoFact";
             this.BoxTipoFact.Size = new System.Drawing.Size(113, 21);
             this.BoxTipoFact.TabIndex = 1;
+            this.BoxTipoFact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxTipoFact_KeyPress);
             // 
             // BoxCliente
             // 
@@ -83,6 +84,7 @@
             this.BoxCliente.Size = new System.Drawing.Size(113, 21);
             this.BoxCliente.TabIndex = 3;
             this.BoxCliente.SelectedIndexChanged += new System.EventHandler(this.BoxCliente_SelectedIndexChanged);
+            this.BoxCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxCliente_KeyPress);
             // 
             // lblCliente
             // 
@@ -174,6 +176,8 @@
             this.BoxProducto.Name = "BoxProducto";
             this.BoxProducto.Size = new System.Drawing.Size(88, 21);
             this.BoxProducto.TabIndex = 15;
+            this.BoxProducto.SelectedIndexChanged += new System.EventHandler(this.BoxProducto_SelectedIndexChanged);
+            this.BoxProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxProducto_KeyPress);
             // 
             // BoxPrecioProducto
             // 
@@ -285,6 +289,8 @@
             this.BoxResponsable.Name = "BoxResponsable";
             this.BoxResponsable.Size = new System.Drawing.Size(113, 21);
             this.BoxResponsable.TabIndex = 32;
+            this.BoxResponsable.SelectedIndexChanged += new System.EventHandler(this.BoxResponsable_SelectedIndexChanged);
+            this.BoxResponsable.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxResponsable_KeyPress);
             // 
             // lblResponsable
             // 
