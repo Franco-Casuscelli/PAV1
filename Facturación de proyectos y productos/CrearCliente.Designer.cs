@@ -50,7 +50,7 @@
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(23, 62);
+            this.lblRazonSocial.Location = new System.Drawing.Point(24, 71);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(70, 13);
             this.lblRazonSocial.TabIndex = 0;
@@ -59,7 +59,7 @@
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(197, 62);
+            this.lblCuit.Location = new System.Drawing.Point(198, 71);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(25, 13);
             this.lblCuit.TabIndex = 1;
@@ -68,7 +68,7 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(23, 128);
+            this.lblCalle.Location = new System.Drawing.Point(24, 137);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(30, 13);
             this.lblCalle.TabIndex = 2;
@@ -77,7 +77,7 @@
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(151, 128);
+            this.lblNumero.Location = new System.Drawing.Point(152, 137);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(44, 13);
             this.lblNumero.TabIndex = 3;
@@ -87,7 +87,7 @@
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(60, 197);
+            this.lblfecha.Location = new System.Drawing.Point(61, 206);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(37, 13);
             this.lblfecha.TabIndex = 4;
@@ -96,7 +96,7 @@
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(262, 128);
+            this.lblBarrio.Location = new System.Drawing.Point(263, 137);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(34, 13);
             this.lblBarrio.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(26, 78);
+            this.txtRazonSocial.Location = new System.Drawing.Point(27, 87);
             this.txtRazonSocial.MaxLength = 50;
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(155, 20);
@@ -112,7 +112,7 @@
             // 
             // txtCuit
             // 
-            this.txtCuit.Location = new System.Drawing.Point(200, 78);
+            this.txtCuit.Location = new System.Drawing.Point(201, 87);
             this.txtCuit.MaxLength = 50;
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(157, 20);
@@ -120,7 +120,7 @@
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(26, 144);
+            this.txtCalle.Location = new System.Drawing.Point(27, 153);
             this.txtCalle.MaxLength = 50;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(111, 20);
@@ -128,7 +128,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(154, 144);
+            this.txtNumero.Location = new System.Drawing.Point(155, 153);
             this.txtNumero.MaxLength = 50;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(92, 20);
@@ -136,7 +136,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(204, 289);
+            this.btnCancelar.Location = new System.Drawing.Point(205, 298);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(92, 29);
             this.btnCancelar.TabIndex = 11;
@@ -146,7 +146,7 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(89, 289);
+            this.btnCargar.Location = new System.Drawing.Point(90, 298);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(92, 29);
             this.btnCargar.TabIndex = 12;
@@ -157,7 +157,7 @@
             // dtaFecha
             // 
             this.dtaFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtaFecha.Location = new System.Drawing.Point(63, 214);
+            this.dtaFecha.Location = new System.Drawing.Point(64, 223);
             this.dtaFecha.Name = "dtaFecha";
             this.dtaFecha.Size = new System.Drawing.Size(107, 20);
             this.dtaFecha.TabIndex = 13;
@@ -166,7 +166,7 @@
             // cmbBarrio
             // 
             this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(265, 144);
+            this.cmbBarrio.Location = new System.Drawing.Point(266, 153);
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(92, 21);
             this.cmbBarrio.TabIndex = 14;
@@ -174,7 +174,7 @@
             // cmbContacto
             // 
             this.cmbContacto.FormattingEnabled = true;
-            this.cmbContacto.Location = new System.Drawing.Point(213, 213);
+            this.cmbContacto.Location = new System.Drawing.Point(214, 222);
             this.cmbContacto.Name = "cmbContacto";
             this.cmbContacto.Size = new System.Drawing.Size(107, 21);
             this.cmbContacto.TabIndex = 15;
@@ -182,7 +182,7 @@
             // lblContacto
             // 
             this.lblContacto.AutoSize = true;
-            this.lblContacto.Location = new System.Drawing.Point(210, 197);
+            this.lblContacto.Location = new System.Drawing.Point(211, 206);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(50, 13);
             this.lblContacto.TabIndex = 16;
@@ -193,7 +193,7 @@
             this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BoxUsuarioLogueado.Enabled = false;
             this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 368);
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 396);
             this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
             this.BoxUsuarioLogueado.MaxLength = 50;
             this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
@@ -205,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(384, 382);
+            this.ClientSize = new System.Drawing.Size(384, 411);
             this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.lblContacto);
             this.Controls.Add(this.cmbContacto);

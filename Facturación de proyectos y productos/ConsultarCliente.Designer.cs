@@ -44,7 +44,7 @@
             // lblCuitCliente
             // 
             this.lblCuitCliente.AutoSize = true;
-            this.lblCuitCliente.Location = new System.Drawing.Point(124, 35);
+            this.lblCuitCliente.Location = new System.Drawing.Point(130, 35);
             this.lblCuitCliente.Name = "lblCuitCliente";
             this.lblCuitCliente.Size = new System.Drawing.Size(124, 13);
             this.lblCuitCliente.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // txtCuitConsulta
             // 
-            this.txtCuitConsulta.Location = new System.Drawing.Point(108, 60);
+            this.txtCuitConsulta.Location = new System.Drawing.Point(114, 60);
             this.txtCuitConsulta.Name = "txtCuitConsulta";
             this.txtCuitConsulta.Size = new System.Drawing.Size(150, 20);
             this.txtCuitConsulta.TabIndex = 1;
@@ -60,7 +60,7 @@
             // chbMostrarBorrado
             // 
             this.chbMostrarBorrado.AutoSize = true;
-            this.chbMostrarBorrado.Location = new System.Drawing.Point(108, 86);
+            this.chbMostrarBorrado.Location = new System.Drawing.Point(114, 86);
             this.chbMostrarBorrado.Name = "chbMostrarBorrado";
             this.chbMostrarBorrado.Size = new System.Drawing.Size(105, 17);
             this.chbMostrarBorrado.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(149, 109);
+            this.btnBuscar.Location = new System.Drawing.Point(155, 109);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
@@ -80,14 +80,14 @@
             // grillaCliente
             // 
             this.grillaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaCliente.Location = new System.Drawing.Point(64, 171);
+            this.grillaCliente.Location = new System.Drawing.Point(70, 171);
             this.grillaCliente.Name = "grillaCliente";
             this.grillaCliente.Size = new System.Drawing.Size(240, 150);
             this.grillaCliente.TabIndex = 4;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(42, 340);
+            this.btnModificar.Location = new System.Drawing.Point(48, 340);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(85, 23);
             this.btnModificar.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(133, 340);
+            this.btnEliminar.Location = new System.Drawing.Point(139, 340);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 23);
             this.btnEliminar.TabIndex = 6;
@@ -107,7 +107,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(230, 340);
+            this.btnVolver.Location = new System.Drawing.Point(236, 340);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(93, 23);
             this.btnVolver.TabIndex = 7;
@@ -117,7 +117,7 @@
             // lblSeleccion
             // 
             this.lblSeleccion.AutoSize = true;
-            this.lblSeleccion.Location = new System.Drawing.Point(61, 155);
+            this.lblSeleccion.Location = new System.Drawing.Point(67, 155);
             this.lblSeleccion.Name = "lblSeleccion";
             this.lblSeleccion.Size = new System.Drawing.Size(60, 13);
             this.lblSeleccion.TabIndex = 8;
@@ -128,7 +128,7 @@
             this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BoxUsuarioLogueado.Enabled = false;
             this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 386);
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 397);
             this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
             this.BoxUsuarioLogueado.MaxLength = 50;
             this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 400);
+            this.ClientSize = new System.Drawing.Size(384, 411);
             this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.btnVolver);

@@ -166,6 +166,18 @@ namespace Facturación_de_proyectos_y_productos
                 dataGridView.Columns.Remove("id_responsable");
                 dataGridView.Columns.Remove("borrado");
             }
+
+            if (dataGridView.Rows.Count == 0)
+            {
+                btnModificar.Enabled = false;
+                BtnEliminar.Enabled = false;
+                return;
+
+            }
+
+
+
+
         }
 
         private void Return_Click(object sender, EventArgs e)
@@ -241,7 +253,7 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (dataGridView.Rows.Count == 1)
+            if (dataGridView.Rows.Count == 0)
             {
                 MessageBox.Show("No se encuentra proyecto a modificar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
