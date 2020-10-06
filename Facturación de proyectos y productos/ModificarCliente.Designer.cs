@@ -42,6 +42,7 @@
             this.cmbContacto = new System.Windows.Forms.ComboBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblRazonSocial1
@@ -161,11 +162,25 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 315);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 17;
+            this.BoxUsuarioLogueado.TextChanged += new System.EventHandler(this.BoxUsuarioLogueado_TextChanged);
+            // 
             // ModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 329);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.cmbContacto);
@@ -204,5 +219,6 @@
         private System.Windows.Forms.ComboBox cmbContacto;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

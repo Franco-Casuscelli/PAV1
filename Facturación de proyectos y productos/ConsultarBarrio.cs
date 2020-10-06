@@ -18,6 +18,7 @@ namespace Facturación_de_proyectos_y_productos
         public ConsultarBarrio()
         {
             InitializeComponent();
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
 
             dataGridView.AllowUserToAddRows = false;
 

@@ -18,6 +18,9 @@ namespace Facturación_de_proyectos_y_productos
         public ModificarCliente(String datoID)
         {
             InitializeComponent();
+
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
@@ -244,6 +247,11 @@ namespace Facturación_de_proyectos_y_productos
         }
 
         private void ModificarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BoxUsuarioLogueado_TextChanged(object sender, EventArgs e)
         {
 
         }

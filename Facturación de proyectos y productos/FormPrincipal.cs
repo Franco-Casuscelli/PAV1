@@ -12,9 +12,12 @@ namespace Facturación_de_proyectos_y_productos
 {
     public partial class FormPrincipal : Form
     {
+       
         public FormPrincipal()
         {
             InitializeComponent();
+            BoxUsuarioLogueado.Enabled = false;
+
         }
 
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -57,6 +60,7 @@ namespace Facturación_de_proyectos_y_productos
             this.WindowState = FormWindowState.Normal;
             Login login = new Login();
             login.ShowDialog();
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
         }
 
         private void label1_Click(object sender, EventArgs e)

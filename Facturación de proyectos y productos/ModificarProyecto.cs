@@ -17,6 +17,9 @@ namespace Facturación_de_proyectos_y_productos
         public ModificarProyecto(String datoID)
         {
             InitializeComponent();
+
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+
             ID = datoID;
 
             SqlConnection conexion = new SqlConnection();
@@ -129,6 +132,11 @@ namespace Facturación_de_proyectos_y_productos
             }
 
         
+        }
+
+        private void BoxUsuarioLogueado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

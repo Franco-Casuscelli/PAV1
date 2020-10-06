@@ -27,6 +27,8 @@ namespace Facturación_de_proyectos_y_productos
 
             InitializeComponent();
 
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+
             dt = new DataTable();
             dt.Columns.Add("Proyecto");
             dt.Columns.Add("Descripcion");

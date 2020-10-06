@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Facturación_de_proyectos_y_productos
 {
+ 
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -45,9 +47,10 @@ namespace Facturación_de_proyectos_y_productos
 
                 if (reader.Read())
                 {
-
+                    
                     if (reader["password"].ToString() == pPassword)
                     {
+                       
                         usuarioValido = true;
                     }
                 }
@@ -82,6 +85,8 @@ namespace Facturación_de_proyectos_y_productos
                 if (ValidarUsuario(txtUsuario.Text, txtPassword.Text))
                 {
                     MessageBox.Show("Logueado correctamente", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Dato.UsuarioLogueado = txtUsuario.Text;
                     this.Close();
                 }
                 else

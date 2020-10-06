@@ -55,6 +55,7 @@
             this.lblFila = new System.Windows.Forms.Label();
             this.BoxResponsable = new System.Windows.Forms.ComboBox();
             this.lblResponsable = new System.Windows.Forms.Label();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -301,11 +302,24 @@
             this.lblResponsable.TabIndex = 31;
             this.lblResponsable.Text = "Responsable";
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 611);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 33;
+            // 
             // CrearFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 626);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.BoxResponsable);
             this.Controls.Add(this.lblResponsable);
             this.Controls.Add(this.lblFila);
@@ -372,5 +386,6 @@
         private System.Windows.Forms.Label lblFila;
         private System.Windows.Forms.ComboBox BoxResponsable;
         private System.Windows.Forms.Label lblResponsable;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

@@ -16,6 +16,7 @@ namespace Facturación_de_proyectos_y_productos
         public CrearBarrio()
         {
             InitializeComponent();
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
         }
 
         private void label1_Click(object sender, EventArgs e)

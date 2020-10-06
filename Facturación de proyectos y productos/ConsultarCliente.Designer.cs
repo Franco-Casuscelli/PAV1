@@ -37,6 +37,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.lblSeleccion = new System.Windows.Forms.Label();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grillaCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,11 +123,24 @@
             this.lblSeleccion.TabIndex = 8;
             this.lblSeleccion.Text = "Seleccione";
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 386);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 15;
+            // 
             // ConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 400);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEliminar);
@@ -157,5 +171,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lblSeleccion;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

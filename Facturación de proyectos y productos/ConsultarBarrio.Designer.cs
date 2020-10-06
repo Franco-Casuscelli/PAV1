@@ -39,6 +39,7 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.CheckListado = new System.Windows.Forms.CheckBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,12 +135,25 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 395);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(110, 16);
+            this.BoxUsuarioLogueado.TabIndex = 16;
+            // 
             // ConsultarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.CheckListado);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.lblFila);
@@ -172,5 +186,6 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.CheckBox CheckListado;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

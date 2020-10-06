@@ -36,6 +36,7 @@
             this.lblAlcance = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -111,12 +112,26 @@
             this.lblDescripcion.TabIndex = 14;
             this.lblDescripcion.Text = "Descripción";
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 347);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 22;
+            this.BoxUsuarioLogueado.TextChanged += new System.EventHandler(this.BoxUsuarioLogueado_TextChanged);
+            // 
             // ModificarProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.BoxAlcance);
@@ -145,5 +160,6 @@
         private System.Windows.Forms.Label lblAlcance;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

@@ -32,6 +32,7 @@
             this.lblCrearBarrio = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BoxBarrio
@@ -72,12 +73,25 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 246);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 21;
+            // 
             // CrearBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.lblCrearBarrio);
@@ -98,5 +112,6 @@
         private System.Windows.Forms.Label lblCrearBarrio;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

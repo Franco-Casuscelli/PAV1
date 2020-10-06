@@ -17,6 +17,7 @@ namespace Facturación_de_proyectos_y_productos
         public ModificarBarrio(String datoID)
         {
             InitializeComponent();
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
             ID = datoID;
         }
 
@@ -163,6 +164,11 @@ namespace Facturación_de_proyectos_y_productos
                 this.Close();
 
             }
+        }
+
+        private void BoxUsuarioLogueado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

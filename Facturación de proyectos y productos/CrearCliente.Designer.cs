@@ -44,6 +44,7 @@
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.cmbContacto = new System.Windows.Forms.ComboBox();
             this.lblContacto = new System.Windows.Forms.Label();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblRazonSocial
@@ -187,12 +188,25 @@
             this.lblContacto.TabIndex = 16;
             this.lblContacto.Text = "Contacto";
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 368);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 17;
+            // 
             // frmCrearCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 382);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.lblContacto);
             this.Controls.Add(this.cmbContacto);
             this.Controls.Add(this.cmbBarrio);
@@ -237,5 +251,6 @@
         private System.Windows.Forms.ComboBox cmbBarrio;
         private System.Windows.Forms.ComboBox cmbContacto;
         private System.Windows.Forms.Label lblContacto;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

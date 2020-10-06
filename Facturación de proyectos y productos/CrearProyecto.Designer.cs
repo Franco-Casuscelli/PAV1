@@ -40,6 +40,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.BoxAlcance = new System.Windows.Forms.RichTextBox();
             this.BoxDescripcion = new System.Windows.Forms.RichTextBox();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblProducto
@@ -115,7 +116,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(44, 350);
+            this.btnCrear.Location = new System.Drawing.Point(46, 340);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(119, 30);
             this.btnCrear.TabIndex = 12;
@@ -125,7 +126,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(225, 350);
+            this.btnCancelar.Location = new System.Drawing.Point(227, 340);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 30);
             this.btnCancelar.TabIndex = 13;
@@ -152,12 +153,25 @@
             this.BoxDescripcion.Text = "";
             this.BoxDescripcion.TextChanged += new System.EventHandler(this.BoxDescripcion_TextChanged);
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 396);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 14;
+            // 
             // CrearProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.BoxAlcance);
@@ -194,5 +208,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.RichTextBox BoxAlcance;
         private System.Windows.Forms.RichTextBox BoxDescripcion;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

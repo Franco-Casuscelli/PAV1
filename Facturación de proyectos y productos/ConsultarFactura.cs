@@ -23,9 +23,11 @@ namespace Facturación_de_proyectos_y_productos
 
         public ConsultarFactura()
         {
+            
             InitializeComponent();
 
-            
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+
             txtDireccion.Enabled = false;
             txtCuit.Enabled = false;
             BoxCliente.Enabled = false;
@@ -346,6 +348,11 @@ namespace Facturación_de_proyectos_y_productos
 
 
             }
+        }
+
+        private void BoxUsuarioLogueado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

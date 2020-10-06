@@ -16,6 +16,8 @@ namespace Facturación_de_proyectos_y_productos
         public ConsultarCliente()
         {
             InitializeComponent();
+
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

@@ -37,6 +37,7 @@
             this.lblBuscarBProyecto = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.BoxProducto = new System.Windows.Forms.ComboBox();
+            this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,12 +126,25 @@
             this.BoxProducto.Size = new System.Drawing.Size(178, 21);
             this.BoxProducto.TabIndex = 19;
             // 
+            // BoxUsuarioLogueado
+            // 
+            this.BoxUsuarioLogueado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxUsuarioLogueado.Enabled = false;
+            this.BoxUsuarioLogueado.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxUsuarioLogueado.Location = new System.Drawing.Point(9, 396);
+            this.BoxUsuarioLogueado.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxUsuarioLogueado.MaxLength = 50;
+            this.BoxUsuarioLogueado.Name = "BoxUsuarioLogueado";
+            this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
+            this.BoxUsuarioLogueado.TabIndex = 20;
+            // 
             // ConsultarProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.BoxProducto);
             this.Controls.Add(this.CheckListado);
             this.Controls.Add(this.BtnEliminar);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Label lblBuscarBProyecto;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ComboBox BoxProducto;
+        private System.Windows.Forms.TextBox BoxUsuarioLogueado;
     }
 }

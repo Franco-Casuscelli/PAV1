@@ -17,6 +17,8 @@ namespace Facturación_de_proyectos_y_productos
         {
             InitializeComponent();
 
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 

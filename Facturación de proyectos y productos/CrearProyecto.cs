@@ -16,6 +16,7 @@ namespace Facturación_de_proyectos_y_productos
         public CrearProyecto()
         {
             InitializeComponent();
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
 
             // llenamos el combo box de responsable
 

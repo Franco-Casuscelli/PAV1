@@ -73,6 +73,7 @@
     <Compile Include="ConsultarBarrio.Designer.cs">
       <DependentUpon>ConsultarBarrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dato.cs" />
     <Compile Include="EliminarBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
