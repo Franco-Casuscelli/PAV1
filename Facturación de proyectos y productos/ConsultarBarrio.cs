@@ -14,6 +14,7 @@ namespace Facturación_de_proyectos_y_productos
     public partial class ConsultarBarrio : Form
     {
         public DataTable DataTable { get; private set; }
+        private int Cont;
 
         public ConsultarBarrio()
         {
@@ -24,6 +25,8 @@ namespace Facturación_de_proyectos_y_productos
 
             btnModificar.Enabled = false;
             BtnEliminar.Enabled = false;
+            Cont = 0;
+            BoxFilas.Text = Cont.ToString();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,6 +76,12 @@ namespace Facturación_de_proyectos_y_productos
                     DataTable tabla = new DataTable();
                     reader.Fill(tabla);
 
+                    String Filas = tabla.Rows.Count.ToString();
+
+                    int temporal = Int16.Parse(Filas);
+                    Cont = Cont + temporal;
+                    BoxFilas.Text = Cont.ToString();
+
                     dataGridView.DataSource = tabla;
                     dataGridView.Columns.Remove("borrado");
                 }
@@ -92,6 +101,12 @@ namespace Facturación_de_proyectos_y_productos
 
                     DataTable tabla = new DataTable();
                     reader.Fill(tabla);
+
+                    String Filas = tabla.Rows.Count.ToString();
+
+                    int temporal = Int16.Parse(Filas);
+                    Cont = Cont + temporal;
+                    BoxFilas.Text = Cont.ToString();
 
                     dataGridView.DataSource = tabla;
                     dataGridView.Columns.Remove("borrado");
@@ -120,7 +135,7 @@ namespace Facturación_de_proyectos_y_productos
 
 
                 TextConsultaBarrio.Text = "";
-            
+                Cont = 0;
 
         }
 

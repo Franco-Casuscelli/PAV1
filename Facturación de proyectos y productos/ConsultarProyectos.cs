@@ -13,6 +13,8 @@ namespace Facturación_de_proyectos_y_productos
 {
     public partial class ConsultarProyectos : Form
     {
+        private int Cont;
+
         public ConsultarProyectos()
         {
             InitializeComponent();
@@ -20,6 +22,8 @@ namespace Facturación_de_proyectos_y_productos
             BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
             btnModificar.Enabled = false;
             BtnEliminar.Enabled = false;
+            Cont = 0;
+            BoxFilas.Text = Cont.ToString();
 
             dataGridView.AllowUserToAddRows = false;
 
@@ -136,6 +140,12 @@ namespace Facturación_de_proyectos_y_productos
                 DataTable tabla = new DataTable();
                 reader.Fill(tabla);
 
+                String Filas = tabla.Rows.Count.ToString();
+
+                int temporal = Int16.Parse(Filas);
+                Cont = Cont + temporal;
+                BoxFilas.Text = Cont.ToString();
+
                 dataGridView.DataSource = tabla;
                 dataGridView.Columns.Remove("id_producto");
                 dataGridView.Columns.Remove("id_responsable");
@@ -160,6 +170,11 @@ namespace Facturación_de_proyectos_y_productos
                 DataTable tabla = new DataTable();
                 reader.Fill(tabla);
 
+                String Filas = tabla.Rows.Count.ToString();
+
+                int temporal = Int16.Parse(Filas);
+                Cont = Cont + temporal;
+                BoxFilas.Text = Cont.ToString();
 
                 dataGridView.DataSource = tabla;
                 dataGridView.Columns.Remove("id_producto");
@@ -174,9 +189,8 @@ namespace Facturación_de_proyectos_y_productos
                 return;
 
             }
-
-
-
+            
+            Cont = 0;
 
         }
 

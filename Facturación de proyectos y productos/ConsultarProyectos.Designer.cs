@@ -38,6 +38,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.BoxProducto = new System.Windows.Forms.ComboBox();
             this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BoxFilas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,12 +140,35 @@
             this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
             this.BoxUsuarioLogueado.TabIndex = 20;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(323, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Filas:";
+            // 
+            // BoxFilas
+            // 
+            this.BoxFilas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxFilas.Enabled = false;
+            this.BoxFilas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxFilas.Location = new System.Drawing.Point(357, 137);
+            this.BoxFilas.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxFilas.MaxLength = 50;
+            this.BoxFilas.Name = "BoxFilas";
+            this.BoxFilas.Size = new System.Drawing.Size(15, 15);
+            this.BoxFilas.TabIndex = 21;
+            // 
             // ConsultarProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BoxFilas);
             this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.BoxProducto);
             this.Controls.Add(this.CheckListado);
@@ -177,5 +202,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ComboBox BoxProducto;
         private System.Windows.Forms.TextBox BoxUsuarioLogueado;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox BoxFilas;
     }
 }

@@ -38,6 +38,8 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.lblSeleccion = new System.Windows.Forms.Label();
             this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
+            this.BoxFilas = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,11 +137,34 @@
             this.BoxUsuarioLogueado.Size = new System.Drawing.Size(120, 15);
             this.BoxUsuarioLogueado.TabIndex = 15;
             // 
+            // BoxFilas
+            // 
+            this.BoxFilas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxFilas.Enabled = false;
+            this.BoxFilas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxFilas.Location = new System.Drawing.Point(295, 155);
+            this.BoxFilas.Margin = new System.Windows.Forms.Padding(0);
+            this.BoxFilas.MaxLength = 50;
+            this.BoxFilas.Name = "BoxFilas";
+            this.BoxFilas.Size = new System.Drawing.Size(15, 15);
+            this.BoxFilas.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(261, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Filas:";
+            // 
             // ConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BoxFilas);
             this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.btnVolver);
@@ -172,5 +197,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lblSeleccion;
         private System.Windows.Forms.TextBox BoxUsuarioLogueado;
+        private System.Windows.Forms.TextBox BoxFilas;
+        private System.Windows.Forms.Label label1;
     }
 }

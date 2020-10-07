@@ -13,18 +13,25 @@ namespace Facturación_de_proyectos_y_productos
 {
     public partial class ConsultarCliente : Form
     {
+
+        private int Cont;
+
         public ConsultarCliente()
         {
             InitializeComponent();
 
             BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+            Cont = 0;
+            BoxFilas.Text = Cont.ToString();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
-
+            BoxFilas.Enabled = false;
+            
 
             SqlConnection conexion = new SqlConnection();
 
@@ -51,6 +58,12 @@ namespace Facturación_de_proyectos_y_productos
                     DataTable tabla = new DataTable();
                     reader.Fill(tabla);
 
+                    String Filas = tabla.Rows.Count.ToString();
+
+                    int temporal = Int16.Parse(Filas);
+                    Cont = Cont + temporal;
+                    BoxFilas.Text = Cont.ToString();
+
                     grillaCliente.DataSource = tabla;
                     grillaCliente.Columns.Remove("borrado");
                 }
@@ -70,6 +83,12 @@ namespace Facturación_de_proyectos_y_productos
 
                     DataTable tabla = new DataTable();
                     reader.Fill(tabla);
+
+                    String Filas = tabla.Rows.Count.ToString();
+
+                    int temporal = Int16.Parse(Filas);
+                    Cont = Cont + temporal;
+                    BoxFilas.Text = Cont.ToString();
 
                     grillaCliente.DataSource = tabla;
                     grillaCliente.Columns.Remove("borrado");
@@ -95,6 +114,7 @@ namespace Facturación_de_proyectos_y_productos
 
 
             txtCuitConsulta.Text = "";
+            Cont = 0;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
