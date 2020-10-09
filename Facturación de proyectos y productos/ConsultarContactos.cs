@@ -180,5 +180,14 @@ namespace Facturación_de_proyectos_y_productos
 
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            String datoID = this.dataGridView.CurrentRow.Cells[0].Value.ToString();
+
+            Form formulario = new ModificarContacto(datoID);
+
+            formulario.ShowDialog();
+        }
     }
 }

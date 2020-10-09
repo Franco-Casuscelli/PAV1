@@ -134,6 +134,12 @@
     <Compile Include="ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarContacto.Designer.cs">
+      <DependentUpon>ModificarContacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarContacto.resx">
+      <DependentUpon>ModificarContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarProyecto.resx">
       <DependentUpon>ModificarProyecto.cs</DependentUpon>

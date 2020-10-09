@@ -148,9 +148,9 @@ namespace Facturación_de_proyectos_y_productos
 
         {
 
-            
-            String datoID = this.dataGridView.CurrentCell.Value.ToString();
-            
+
+            String datoID = this.dataGridView.CurrentRow.Cells[0].Value.ToString();
+
 
 
             Form formulario = new ModificarBarrio(datoID);
