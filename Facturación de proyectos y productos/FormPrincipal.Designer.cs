@@ -149,14 +149,15 @@
             this.consultarToolStripMenuItem2,
             this.eliminarToolStripMenuItem2});
             this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
-            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactosToolStripMenuItem.Text = "Contactos";
             // 
             // crearToolStripMenuItem2
             // 
             this.crearToolStripMenuItem2.Name = "crearToolStripMenuItem2";
-            this.crearToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
+            this.crearToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.crearToolStripMenuItem2.Text = "Crear";
+            this.crearToolStripMenuItem2.Click += new System.EventHandler(this.crearToolStripMenuItem2_Click);
             // 
             // consultarToolStripMenuItem2
             // 
