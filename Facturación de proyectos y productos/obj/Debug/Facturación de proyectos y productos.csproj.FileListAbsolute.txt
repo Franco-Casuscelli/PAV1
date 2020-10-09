@@ -103,3 +103,4 @@ C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Deb
 C:\Users\Mateo\Desktop\Nueva carpeta\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarCliente.resources
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarFactura.resources
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearContacto.resources
+C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarContactos.resources

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultarContactos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarContactos.Designer.cs">
+      <DependentUpon>ConsultarContactos.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConsultarCliente.resx">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarContactos.resx">
+      <DependentUpon>ConsultarContactos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearCliente.resx">
       <DependentUpon>CrearCliente.cs</DependentUpon>

@@ -114,5 +114,11 @@ namespace Facturación_de_proyectos_y_productos
             Form formulario = new CrearContacto();
             formulario.ShowDialog();
         }
+
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ConsultarContactos();
+            formulario.ShowDialog();
+        }
     }
 }
