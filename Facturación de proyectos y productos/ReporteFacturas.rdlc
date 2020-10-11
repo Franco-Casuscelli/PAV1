@@ -15,7 +15,7 @@
               <Width>5.13922cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.78985cm</Width>
+              <Width>2.9961cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -299,9 +299,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetFacturas</DataSetName>
         <Top>2.35162cm</Top>
-        <Left>1.36036cm</Left>
-        <Height>1.25291cm</Height>
-        <Width>15.74777cm</Width>
+        <Left>2.02781cm</Left>
+        <Height>1.2529cm</Height>
+        <Width>14.95403cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -345,8 +345,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reporte de facturas creadas</Value>
-                <Style />
+                <Value>Reporte de facturas emitidas</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -354,9 +357,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>0.73766cm</Top>
-        <Left>7.14058cm</Left>
+        <Left>6.4262cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.69604cm</Width>
+        <Width>6.01896cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>

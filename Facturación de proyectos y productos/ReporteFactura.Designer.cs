@@ -30,26 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.FacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSetFacturas = new Facturación_de_proyectos_y_productos.DataSetFacturas();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.FacturasTableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.FacturasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetFacturas";
-            reportDataSource1.Value = this.FacturasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Facturación_de_proyectos_y_productos.ReporteFacturas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(687, 304);
-            this.reportViewer1.TabIndex = 0;
             // 
             // FacturasBindingSource
             // 
@@ -61,6 +48,19 @@
             this.DataSetFacturas.DataSetName = "DataSetFacturas";
             this.DataSetFacturas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetFacturas";
+            reportDataSource1.Value = this.FacturasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Facturación_de_proyectos_y_productos.ReporteFacturas.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(704, 304);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // FacturasTableAdapter
             // 
             this.FacturasTableAdapter.ClearBeforeFill = true;
@@ -70,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(687, 304);
+            this.ClientSize = new System.Drawing.Size(704, 304);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ReporteFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
