@@ -52,20 +52,20 @@ namespace Facturación_de_proyectos_y_productos
                 }
             }
             SqlConnection conexion2 = new SqlConnection();
-            conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+            conexion2.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
             try
             {
-                conexion.Open();
+                conexion2.Open();
 
                 String consultaSqlContacto = "Select * From Contactos";
-                SqlCommand command = new SqlCommand(consultaSqlContacto, conexion);
+                SqlCommand command = new SqlCommand(consultaSqlContacto, conexion2);
 
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    cmbBarrio.Items.Add(reader["nombre"].ToString());
+                    cmbContacto.Items.Add(reader["nombre"].ToString());
                 }
                 reader.Close();
             }
@@ -76,23 +76,23 @@ namespace Facturación_de_proyectos_y_productos
             }
             finally
             {
-                if (conexion.State == ConnectionState.Open)
+                if (conexion2.State == ConnectionState.Open)
                 {
-                    conexion.Close();
+                    conexion2.Close();
                 }
             }
 
             ID = datoID;
 
             SqlConnection conexion1 = new SqlConnection();
-            conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+            conexion1.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
             try
             {
-                conexion.Open();
+                conexion1.Open();
 
-                String consultaSqlNombreRepetido = "Select * From Clientes where id_cliente = @valor";
-                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion1);
+                String consultaSql= "Select * From Clientes where id_cliente = @valor";
+                SqlCommand command = new SqlCommand(consultaSql, conexion1);
 
                 command.Parameters.AddWithValue("@valor", ID);
 
@@ -114,17 +114,17 @@ namespace Facturación_de_proyectos_y_productos
             }
             finally
             {
-                if (conexion.State == ConnectionState.Open)
+                if (conexion1.State == ConnectionState.Open)
                 {
-                    conexion.Close();
+                    conexion1.Close();
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string idBarrio = "none";
-            string idContacto = "none";
+            String idBarrio = "none";
+            String idContacto = "none";
 
             if ((txtRazonSocial1.Text == "" || txtNumero.Text == "" || txtCalle.Text == "" || txtCuit1.Text == "" || cmbBarrio.Text == "" || cmbContacto.Text == ""))
             {
@@ -200,17 +200,17 @@ namespace Facturación_de_proyectos_y_productos
 
                     conexion3.Open();
 
-                    String consultaSql = "UPDATE dbo.Clientes SET razon_social = @razon_social, cuit = @cuit, calle = @calle , numero = @numero , id_barrio = @id_barrio, id_contacto = @id_contacto, WHERE id_cliente = '" + this.ID + "'";
+                    String consultaSql = "UPDATE dbo.Clientes SET razon_social = @razon_social, cuit = @cuit, calle = @calle , numero = @numero , id_barrio = @id_barrio, id_contacto = @id_contacto WHERE id_cliente = '" + this.ID + "'";
 
-                    //Creamos un objeto command para luego ejecutar la consulta sobre la base de datos
+                    
                     SqlCommand command = new SqlCommand(consultaSql, conexion3);
 
                     command.Parameters.AddWithValue("@razon_social", txtRazonSocial1.Text);
                     command.Parameters.AddWithValue("@cuit", txtCuit1.Text);
                     command.Parameters.AddWithValue("@calle", txtCalle.Text);
                     command.Parameters.AddWithValue("@numero", txtNumero.Text);
-                    command.Parameters.AddWithValue("@id_barrio", txtNumero.Text);
-                    command.Parameters.AddWithValue("@id_contacto", txtNumero.Text);
+                    command.Parameters.AddWithValue("@id_barrio", idBarrio);
+                    command.Parameters.AddWithValue("@id_contacto", idContacto);
 
 
                     try

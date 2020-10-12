@@ -41,6 +41,7 @@ namespace Facturación_de_proyectos_y_productos
         private void btnBuscar_Click(object sender, EventArgs e)
 
         {
+            grilla.Clear();
             String idBarrio = "";
             String idContacto = "";   
             String nombreBarrio = "none";
@@ -190,15 +191,15 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (grillaCliente.Rows.Count == 1)
+            if (grillaCliente.Rows.Count == 0)
             {
-                MessageBox.Show("No se encuentra proyecto a modificar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se encuentra cliente a modificar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
 
             }
             else
             {
-                String datoID = this.grillaCliente.CurrentCell.Value.ToString();
+                String datoID = this.grillaCliente.CurrentRow.Cells[0].Value.ToString();
 
                 Form formulario = new ModificarCliente(datoID);
 
@@ -209,25 +210,21 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (grillaCliente.Rows.Count == 1)
+            if (grillaCliente.Rows.Count == 0)
             {
-                MessageBox.Show("No se encuentra proyecto a eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se encuentra cliente a eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
 
             }
             else
             {
+                String datoID = this.grillaCliente.CurrentRow.Cells[0].Value.ToString();
 
-                String datoID = this.grillaCliente.CurrentCell.Value.ToString();
-
-
-                if (MessageBox.Show("¿Esta seguro que desea Eliminar este proyecto?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Esta seguro que desea Eliminar este cliente?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     SqlConnection conexion = new SqlConnection();
 
-
                     conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
-
 
                     try
                     {
@@ -247,8 +244,6 @@ namespace Facturación_de_proyectos_y_productos
                         MessageBox.Show("Eliminado con exito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
-
-
 
                     catch (SqlException ex)
                     {
