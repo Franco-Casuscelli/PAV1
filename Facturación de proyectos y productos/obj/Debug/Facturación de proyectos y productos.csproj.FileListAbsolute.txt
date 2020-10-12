@@ -173,5 +173,3 @@ C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\bin\Deb
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CopyComplete
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ReporteFactura.resources
-C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\RdlCompile.cache
-C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\RdlCompile.compiled
