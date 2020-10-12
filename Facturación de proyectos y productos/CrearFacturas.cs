@@ -505,7 +505,7 @@ namespace Facturación_de_proyectos_y_productos
 
                             command.Parameters.AddWithValue("@NumFact", txtNumeroFactura.Text);
                             command.Parameters.AddWithValue("@Cliente", ClienteCuit);
-                            command.Parameters.AddWithValue("@Fecha", dataFecha.Text);
+                            command.Parameters.AddWithValue("@Fecha", dataFecha.Value);
                             command.Parameters.AddWithValue("@Responsable", IdResponsable);
                             command.Parameters.AddWithValue("@Borrado", 0);
 
