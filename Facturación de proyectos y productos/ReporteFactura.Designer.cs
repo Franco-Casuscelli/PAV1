@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.FacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Rango_FechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSetFacturas = new Facturación_de_proyectos_y_productos.DataSetFacturas();
+            this.FacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.FacturasTableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.FacturasTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,22 +40,26 @@
             this.FechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.Rango_FechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Rango_FechaTableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.Rango_FechaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rango_FechaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // FacturasBindingSource
+            // Rango_FechaBindingSource
             // 
-            this.FacturasBindingSource.DataMember = "Facturas";
-            this.FacturasBindingSource.DataSource = this.DataSetFacturas;
+            this.Rango_FechaBindingSource.DataMember = "Rango_Fecha";
+            this.Rango_FechaBindingSource.DataSource = this.DataSetFacturas;
             // 
             // DataSetFacturas
             // 
             this.DataSetFacturas.DataSetName = "DataSetFacturas";
             this.DataSetFacturas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // FacturasBindingSource
+            // 
+            this.FacturasBindingSource.DataMember = "Facturas";
+            this.FacturasBindingSource.DataSource = this.DataSetFacturas;
             // 
             // reportViewer1
             // 
@@ -119,11 +124,6 @@
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // Rango_FechaBindingSource
-            // 
-            this.Rango_FechaBindingSource.DataMember = "Rango_Fecha";
-            this.Rango_FechaBindingSource.DataSource = this.DataSetFacturas;
-            // 
             // Rango_FechaTableAdapter
             // 
             this.Rango_FechaTableAdapter.ClearBeforeFill = true;
@@ -140,13 +140,14 @@
             this.Controls.Add(this.FechaDesde);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reportViewer1);
+            this.MinimizeBox = false;
             this.Name = "ReporteFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reporte facturas de proyectos";
             this.Load += new System.EventHandler(this.ReporteBarrio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rango_FechaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

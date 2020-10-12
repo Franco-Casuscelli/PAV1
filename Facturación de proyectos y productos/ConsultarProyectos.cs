@@ -212,9 +212,9 @@ namespace Facturación_de_proyectos_y_productos
 
 
 
-                String datoID = this.dataGridView.CurrentCell.Value.ToString();
+                String datoID = this.dataGridView.CurrentRow.Cells[0].Value.ToString();
 
-                
+
 
                 if (MessageBox.Show("¿Esta seguro que desea Eliminar este proyecto?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -276,7 +276,7 @@ namespace Facturación_de_proyectos_y_productos
             }
             else
             {
-                String datoID = this.dataGridView.CurrentCell.Value.ToString();
+                String datoID = this.dataGridView.CurrentRow.Cells[0].Value.ToString();
 
                 Form formulario = new ModificarProyecto(datoID);
 
