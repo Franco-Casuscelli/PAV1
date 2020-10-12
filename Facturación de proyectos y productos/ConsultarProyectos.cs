@@ -201,7 +201,7 @@ namespace Facturación_de_proyectos_y_productos
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridView.Rows.Count == 1)
+            if (dataGridView.Rows.Count == 0)
             {
                 MessageBox.Show("No se encuentra proyecto a eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -214,6 +214,7 @@ namespace Facturación_de_proyectos_y_productos
 
                 String datoID = this.dataGridView.CurrentCell.Value.ToString();
 
+                
 
                 if (MessageBox.Show("¿Esta seguro que desea Eliminar este proyecto?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
