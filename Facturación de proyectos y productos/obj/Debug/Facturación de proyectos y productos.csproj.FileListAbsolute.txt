@@ -173,3 +173,99 @@ C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\bin\Deb
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CopyComplete
 C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ReporteFactura.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\SQLEXPRESS.mdf
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\SQLEXPRESS_log.ldf
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.exe.config
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.exe
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Facturación de proyectos y productos.pdb
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\EnvDTE.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\stdole.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csprojAssemblyReference.cache
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarCliente.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarContactos.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.frmCrearCliente.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearBarrio.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarBarrio.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.EliminarBarrio.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearFacturas.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearProyecto.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarProyectos.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ConsultarFactura.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.CrearContacto.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarCliente.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarContacto.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarProyecto.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ModificarBarrio.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Login.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.FormPrincipal.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.Properties.Resources.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación_de_proyectos_y_productos.ReporteFactura.resources
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.GenerateResource.cache
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CopyComplete
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
+C:\Users\Mateo\Desktop\Master\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
