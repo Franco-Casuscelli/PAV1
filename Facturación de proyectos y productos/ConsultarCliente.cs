@@ -50,140 +50,277 @@ namespace Facturación_de_proyectos_y_productos
             if (txtCuitConsulta.Text == "")
             {
                 MessageBox.Show("Por favor ingrese un numero de cuit", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+
             }
             else
             {
-                SqlConnection conexion = new SqlConnection();
-                conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
-
-                try
+                if (chbMostrarBorrado.Checked)
                 {
-                    conexion.Open();
+                    SqlConnection conexion = new SqlConnection();
+                    conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
-                    String consultaSql = "Select * From Clientes where cuit = @cuit ";
-                    SqlCommand command = new SqlCommand(consultaSql, conexion);
-                    command.Parameters.AddWithValue("@cuit", txtCuitConsulta.Text);
-                    SqlDataReader reader = command.ExecuteReader();
-
-
-                    if (reader.Read())
+                    try
                     {
-                        idBarrio = reader["id_barrio"].ToString();
-                        idContacto = reader["id_contacto"].ToString();
-                      
+                        conexion.Open();
+
+                        String consultaSql = "Select * From Clientes where cuit = @cuit";
+                        SqlCommand command = new SqlCommand(consultaSql, conexion);
+                        command.Parameters.AddWithValue("@cuit", txtCuitConsulta.Text);
+                        SqlDataReader reader = command.ExecuteReader();
+
+
+                        if (reader.Read())
+                        {
+                            idBarrio = reader["id_barrio"].ToString();
+                            idContacto = reader["id_contacto"].ToString();
+
+                        }
+
+                        reader.Close();
                     }
-                    
-                    reader.Close();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (conexion.State == ConnectionState.Open)
+                    catch (SqlException ex)
                     {
-                        conexion.Close();
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                
-                SqlConnection conexion4 = new SqlConnection();
-                conexion4.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
-                try
-                {
-                    conexion4.Open();
-                    String consultaSqlContacto = "Select * From Barrios where id_barrio = '" + idBarrio + "'";
-                    SqlCommand command = new SqlCommand(consultaSqlContacto, conexion4);
-
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
+                    finally
                     {
-                        nombreBarrio = reader["nombre"].ToString();
-                        
+                        if (conexion.State == ConnectionState.Open)
+                        {
+                            conexion.Close();
+                        }
                     }
-                    reader.Close();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (conexion4.State == ConnectionState.Open)
+
+                    SqlConnection conexion4 = new SqlConnection();
+                    conexion4.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+                    try
                     {
-                        conexion4.Close();
-                    }
-                }
-                SqlConnection conexion5 = new SqlConnection();
-                conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
-                try
-                {
-                    conexion5.Open();
-                    String consultaSqlContacto = "Select * From Contactos where id_contacto = '" + idContacto + "'";
-                    SqlCommand command = new SqlCommand(consultaSqlContacto, conexion5);
+                        conexion4.Open();
+                        String consultaSqlContacto = "Select * From Barrios where id_barrio = '" + idBarrio + "'";
+                        SqlCommand command = new SqlCommand(consultaSqlContacto, conexion4);
 
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            nombreBarrio = reader["nombre"].ToString();
+
+                        }
+                        reader.Close();
+                    }
+                    catch (SqlException ex)
                     {
-                        email = reader["email"].ToString();
-                        
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    reader.Close();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (conexion5.State == ConnectionState.Open)
+                    finally
                     {
-                        conexion5.Close();
+                        if (conexion4.State == ConnectionState.Open)
+                        {
+                            conexion4.Close();
+                        }
                     }
-                }
-
-                SqlConnection conexion6 = new SqlConnection();
-                conexion6.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
-
-                try
-                {
-                    conexion6.Open();
-
-                    String DatosProyecto = "Select * From Clientes where cuit = '" + this.txtCuitConsulta.Text + "'";
-                    SqlCommand command2 = new SqlCommand(DatosProyecto, conexion6);
-
-                    SqlDataReader reader1 = command2.ExecuteReader();
-
-                    if (reader1.Read())
+                    SqlConnection conexion5 = new SqlConnection();
+                    conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+                    try
                     {
-                        DataRow row = grilla.NewRow();
+                        conexion5.Open();
+                        String consultaSqlContacto = "Select * From Contactos where id_contacto = '" + idContacto + "'";
+                        SqlCommand command = new SqlCommand(consultaSqlContacto, conexion5);
 
-                        row["ID"] = reader1["id_cliente"].ToString();
-                        row["Cuit"] = reader1["cuit"].ToString();
-                        row["Razon Social"] = reader1["razon_social"].ToString();
-                        row["Contacto"] = email;
-                        row["Calle"] = reader1["calle"].ToString();
-                        row["Numero"] = reader1["numero"].ToString();
-                        row["Barrio"] = nombreBarrio;
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            email = reader["email"].ToString();
 
-                        grilla.Rows.Add(row);
-
+                        }
+                        reader.Close();
                     }
-                    reader1.Close();
-                }
-
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (conexion6.State == ConnectionState.Open)
+                    catch (SqlException ex)
                     {
-                        conexion6.Close();
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion5.State == ConnectionState.Open)
+                        {
+                            conexion5.Close();
+                        }
+                    }
+
+                    SqlConnection conexion6 = new SqlConnection();
+                    conexion6.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                    try
+                    {
+                        conexion6.Open();
+
+                        String DatosProyecto = "Select * From Clientes where cuit = '" + this.txtCuitConsulta.Text + "'";
+                        SqlCommand command2 = new SqlCommand(DatosProyecto, conexion6);
+
+                        SqlDataReader reader1 = command2.ExecuteReader();
+
+                        if (reader1.Read())
+                        {
+                            DataRow row = grilla.NewRow();
+
+                            row["ID"] = reader1["id_cliente"].ToString();
+                            row["Cuit"] = reader1["cuit"].ToString();
+                            row["Razon Social"] = reader1["razon_social"].ToString();
+                            row["Contacto"] = email;
+                            row["Calle"] = reader1["calle"].ToString();
+                            row["Numero"] = reader1["numero"].ToString();
+                            row["Barrio"] = nombreBarrio;
+
+                            grilla.Rows.Add(row);
+
+                        }
+                        reader1.Close();
+                    }
+
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion6.State == ConnectionState.Open)
+                        {
+                            conexion6.Close();
+                        }
                     }
                 }
+                else 
+                {
+                    SqlConnection conexion = new SqlConnection();
+                    conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                    try
+                    {
+                        conexion.Open();
+
+                        String consultaSql = "Select * From Clientes where cuit = @cuit AND borrado = 0";
+                        SqlCommand command = new SqlCommand(consultaSql, conexion);
+                        command.Parameters.AddWithValue("@cuit", txtCuitConsulta.Text);
+                        SqlDataReader reader = command.ExecuteReader();
+
+
+                        if (reader.Read())
+                        {
+                            idBarrio = reader["id_barrio"].ToString();
+                            idContacto = reader["id_contacto"].ToString();
+
+                        }
+
+                        reader.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion.State == ConnectionState.Open)
+                        {
+                            conexion.Close();
+                        }
+                    }
+
+                    SqlConnection conexion4 = new SqlConnection();
+                    conexion4.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+                    try
+                    {
+                        conexion4.Open();
+                        String consultaSqlContacto = "Select * From Barrios where id_barrio = '" + idBarrio + "'";
+                        SqlCommand command = new SqlCommand(consultaSqlContacto, conexion4);
+
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            nombreBarrio = reader["nombre"].ToString();
+
+                        }
+                        reader.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion4.State == ConnectionState.Open)
+                        {
+                            conexion4.Close();
+                        }
+                    }
+                    SqlConnection conexion5 = new SqlConnection();
+                    conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+                    try
+                    {
+                        conexion5.Open();
+                        String consultaSqlContacto = "Select * From Contactos where id_contacto = '" + idContacto + "'";
+                        SqlCommand command = new SqlCommand(consultaSqlContacto, conexion5);
+
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            email = reader["email"].ToString();
+
+                        }
+                        reader.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion5.State == ConnectionState.Open)
+                        {
+                            conexion5.Close();
+                        }
+                    }
+
+                    SqlConnection conexion6 = new SqlConnection();
+                    conexion6.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+                    try
+                    {
+                        conexion6.Open();
+
+                        String DatosProyecto = "Select * From Clientes where cuit = '" + this.txtCuitConsulta.Text + "'";
+                        SqlCommand command2 = new SqlCommand(DatosProyecto, conexion6);
+
+                        SqlDataReader reader1 = command2.ExecuteReader();
+
+                        if (reader1.Read())
+                        {
+                            DataRow row = grilla.NewRow();
+
+                            row["ID"] = reader1["id_cliente"].ToString();
+                            row["Cuit"] = reader1["cuit"].ToString();
+                            row["Razon Social"] = reader1["razon_social"].ToString();
+                            row["Contacto"] = email;
+                            row["Calle"] = reader1["calle"].ToString();
+                            row["Numero"] = reader1["numero"].ToString();
+                            row["Barrio"] = nombreBarrio;
+
+                            grilla.Rows.Add(row);
+
+                        }
+                        reader1.Close();
+                    }
+
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        if (conexion6.State == ConnectionState.Open)
+                        {
+                            conexion6.Close();
+                        }
+                    }
+                }
+
             }
 
 
