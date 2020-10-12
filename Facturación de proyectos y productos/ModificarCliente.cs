@@ -15,6 +15,10 @@ namespace Facturación_de_proyectos_y_productos
 
     {
         String ID;
+        String idBarrio;
+        String idContacto;
+
+
         public ModificarCliente(String datoID)
         {
             InitializeComponent();
@@ -104,6 +108,8 @@ namespace Facturación_de_proyectos_y_productos
                     txtCuit1.Text = reader["cuit"].ToString();
                     txtCalle.Text = reader["calle"].ToString();
                     txtNumero.Text = reader["numero"].ToString();
+                    idBarrio = reader["id_barrio"].ToString();
+                    idContacto = reader["id_contacto"].ToString();
                 }
                 reader.Close();
             }
@@ -119,6 +125,79 @@ namespace Facturación_de_proyectos_y_productos
                     conexion1.Close();
                 }
             }
+
+
+
+            SqlConnection conexion5 = new SqlConnection();
+            conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion5.Open();
+
+                String consultaSql = "Select * From Barrios where id_barrio = @valor";
+                SqlCommand command = new SqlCommand(consultaSql, conexion5);
+
+                command.Parameters.AddWithValue("@valor", idBarrio);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    cmbBarrio.Text = reader["nombre"].ToString();
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion5.State == ConnectionState.Open)
+                {
+                    conexion5.Close();
+                }
+            }
+
+
+            SqlConnection conexion6 = new SqlConnection();
+            conexion6.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion6.Open();
+
+                String consultaSql = "Select * From Contactos where id_contacto = @valor";
+                SqlCommand command = new SqlCommand(consultaSql, conexion6);
+
+                command.Parameters.AddWithValue("@valor", idContacto);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    cmbContacto.Text = reader["nombre"].ToString();
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion6.State == ConnectionState.Open)
+                {
+                    conexion6.Close();
+                }
+            }
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
