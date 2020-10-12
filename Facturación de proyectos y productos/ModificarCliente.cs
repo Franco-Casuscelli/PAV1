@@ -255,5 +255,15 @@ namespace Facturación_de_proyectos_y_productos
         {
 
         }
+
+        private void lblContacto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
