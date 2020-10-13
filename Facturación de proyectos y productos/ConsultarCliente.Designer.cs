@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblCuitCliente = new System.Windows.Forms.Label();
-            this.txtCuitConsulta = new System.Windows.Forms.TextBox();
             this.chbMostrarBorrado = new System.Windows.Forms.CheckBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.grillaCliente = new System.Windows.Forms.DataGridView();
@@ -40,6 +39,7 @@
             this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
             this.BoxFilas = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCuitConsulta = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grillaCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,17 +52,10 @@
             this.lblCuitCliente.TabIndex = 0;
             this.lblCuitCliente.Text = "Ingrese el cuit del cliente";
             // 
-            // txtCuitConsulta
-            // 
-            this.txtCuitConsulta.Location = new System.Drawing.Point(114, 60);
-            this.txtCuitConsulta.Name = "txtCuitConsulta";
-            this.txtCuitConsulta.Size = new System.Drawing.Size(150, 20);
-            this.txtCuitConsulta.TabIndex = 1;
-            // 
             // chbMostrarBorrado
             // 
             this.chbMostrarBorrado.AutoSize = true;
-            this.chbMostrarBorrado.Location = new System.Drawing.Point(114, 86);
+            this.chbMostrarBorrado.Location = new System.Drawing.Point(114, 78);
             this.chbMostrarBorrado.Name = "chbMostrarBorrado";
             this.chbMostrarBorrado.Size = new System.Drawing.Size(105, 17);
             this.chbMostrarBorrado.TabIndex = 2;
@@ -82,14 +75,14 @@
             // grillaCliente
             // 
             this.grillaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaCliente.Location = new System.Drawing.Point(70, 171);
+            this.grillaCliente.Location = new System.Drawing.Point(12, 171);
             this.grillaCliente.Name = "grillaCliente";
-            this.grillaCliente.Size = new System.Drawing.Size(240, 150);
+            this.grillaCliente.Size = new System.Drawing.Size(360, 150);
             this.grillaCliente.TabIndex = 4;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(48, 340);
+            this.btnModificar.Location = new System.Drawing.Point(48, 347);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(85, 23);
             this.btnModificar.TabIndex = 5;
@@ -99,7 +92,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(139, 340);
+            this.btnEliminar.Location = new System.Drawing.Point(139, 347);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 23);
             this.btnEliminar.TabIndex = 6;
@@ -109,7 +102,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(236, 340);
+            this.btnVolver.Location = new System.Drawing.Point(236, 347);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(93, 23);
             this.btnVolver.TabIndex = 7;
@@ -120,11 +113,11 @@
             // lblSeleccion
             // 
             this.lblSeleccion.AutoSize = true;
-            this.lblSeleccion.Location = new System.Drawing.Point(67, 155);
+            this.lblSeleccion.Location = new System.Drawing.Point(12, 155);
             this.lblSeleccion.Name = "lblSeleccion";
-            this.lblSeleccion.Size = new System.Drawing.Size(60, 13);
+            this.lblSeleccion.Size = new System.Drawing.Size(79, 13);
             this.lblSeleccion.TabIndex = 8;
-            this.lblSeleccion.Text = "Seleccione";
+            this.lblSeleccion.Text = "Seleccionar fila";
             // 
             // BoxUsuarioLogueado
             // 
@@ -143,7 +136,7 @@
             this.BoxFilas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BoxFilas.Enabled = false;
             this.BoxFilas.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BoxFilas.Location = new System.Drawing.Point(295, 155);
+            this.BoxFilas.Location = new System.Drawing.Point(357, 155);
             this.BoxFilas.Margin = new System.Windows.Forms.Padding(0);
             this.BoxFilas.MaxLength = 50;
             this.BoxFilas.Name = "BoxFilas";
@@ -153,17 +146,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(261, 155);
+            this.label1.Location = new System.Drawing.Point(323, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Filas:";
+            // 
+            // txtCuitConsulta
+            // 
+            this.txtCuitConsulta.FormattingEnabled = true;
+            this.txtCuitConsulta.Location = new System.Drawing.Point(114, 51);
+            this.txtCuitConsulta.Name = "txtCuitConsulta";
+            this.txtCuitConsulta.Size = new System.Drawing.Size(158, 21);
+            this.txtCuitConsulta.TabIndex = 18;
             // 
             // ConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.txtCuitConsulta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BoxFilas);
             this.Controls.Add(this.BoxUsuarioLogueado);
@@ -174,7 +176,6 @@
             this.Controls.Add(this.grillaCliente);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.chbMostrarBorrado);
-            this.Controls.Add(this.txtCuitConsulta);
             this.Controls.Add(this.lblCuitCliente);
             this.Name = "ConsultarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -189,7 +190,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblCuitCliente;
-        private System.Windows.Forms.TextBox txtCuitConsulta;
         private System.Windows.Forms.CheckBox chbMostrarBorrado;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView grillaCliente;
@@ -200,5 +200,6 @@
         private System.Windows.Forms.TextBox BoxUsuarioLogueado;
         private System.Windows.Forms.TextBox BoxFilas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox txtCuitConsulta;
     }
 }

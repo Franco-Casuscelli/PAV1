@@ -7,3 +7,10 @@
     }
 }
 
+
+namespace Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters {
+    
+    
+    public partial class Rango_FechaTableAdapter {
+    }
+}

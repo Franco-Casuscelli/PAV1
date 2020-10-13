@@ -14,8 +14,8 @@ namespace Facturación_de_proyectos_y_productos
     public partial class ConsultarCliente : Form
     {
         private DataTable grilla;
+        private int Cont;
 
-        
 
         public ConsultarCliente()
         {
@@ -24,6 +24,10 @@ namespace Facturación_de_proyectos_y_productos
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
             BoxFilas.Enabled = false;
+
+            BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+            Cont = 0;
+            BoxFilas.Text = Cont.ToString();
 
             grilla = new DataTable();
             grilla.Columns.Add("ID");
@@ -36,6 +40,40 @@ namespace Facturación_de_proyectos_y_productos
 
             grillaCliente.DataSource = grilla;
             grillaCliente.AllowUserToAddRows = false;
+
+            SqlConnection conexion9 = new SqlConnection();
+            conexion9.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+            try
+            {
+                conexion9.Open();
+                String consultaSqlContacto = "Select * From Clientes";
+                SqlCommand command = new SqlCommand(consultaSqlContacto, conexion9);
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    txtCuitConsulta.Items.Add(reader["cuit"].ToString());
+
+                }
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion9.State == ConnectionState.Open)
+                {
+                    conexion9.Close();
+                }
+            }
+
+
+
+
+
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -47,6 +85,8 @@ namespace Facturación_de_proyectos_y_productos
             String nombreBarrio = "none";
             String email = "none";
             String validar = "none" ;
+            Cont = 0;
+
 
             if (txtCuitConsulta.Text == "")
             {
@@ -259,6 +299,7 @@ namespace Facturación_de_proyectos_y_productos
                             conexion4.Close();
                         }
                     }
+
                     SqlConnection conexion5 = new SqlConnection();
                     conexion5.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
                     try
@@ -338,6 +379,13 @@ namespace Facturación_de_proyectos_y_productos
                 }
 
             }
+
+            String Filas = grilla.Rows.Count.ToString();
+
+            int temporal = Int16.Parse(Filas);
+            Cont = Cont + temporal;
+            BoxFilas.Text = Cont.ToString();
+
 
 
         }
