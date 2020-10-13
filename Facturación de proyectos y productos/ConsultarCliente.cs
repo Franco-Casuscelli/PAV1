@@ -46,6 +46,7 @@ namespace Facturación_de_proyectos_y_productos
             String idContacto = "";   
             String nombreBarrio = "none";
             String email = "none";
+            String validar = "none" ;
 
             if (txtCuitConsulta.Text == "")
             {
@@ -73,9 +74,9 @@ namespace Facturación_de_proyectos_y_productos
                         {
                             idBarrio = reader["id_barrio"].ToString();
                             idContacto = reader["id_contacto"].ToString();
-
+                            validar = "True";
                         }
-
+                        
                         reader.Close();
                     }
                     catch (SqlException ex)
@@ -102,7 +103,7 @@ namespace Facturación_de_proyectos_y_productos
                         if (reader.Read())
                         {
                             nombreBarrio = reader["nombre"].ToString();
-
+                            
                         }
                         reader.Close();
                     }
@@ -129,7 +130,7 @@ namespace Facturación_de_proyectos_y_productos
                         if (reader.Read())
                         {
                             email = reader["email"].ToString();
-
+                            
                         }
                         reader.Close();
                     }
@@ -170,7 +171,7 @@ namespace Facturación_de_proyectos_y_productos
                             row["Barrio"] = nombreBarrio;
 
                             grilla.Rows.Add(row);
-
+                            validar = "True";
                         }
                         reader1.Close();
                     }
@@ -186,9 +187,16 @@ namespace Facturación_de_proyectos_y_productos
                             conexion6.Close();
                         }
                     }
+                    if (validar == "none")
+                    {
+                        MessageBox.Show(string.Concat("Cuit no encontrado"), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtCuitConsulta.Text = "";
+                        return;
+                    }
                 }
                 else 
                 {
+                    
                     SqlConnection conexion = new SqlConnection();
                     conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
@@ -196,7 +204,7 @@ namespace Facturación_de_proyectos_y_productos
                     {
                         conexion.Open();
 
-                        String consultaSql = "Select * From Clientes where cuit = @cuit AND borrado = 0";
+                        String consultaSql = "Select * From Clientes where cuit = @cuit";
                         SqlCommand command = new SqlCommand(consultaSql, conexion);
                         command.Parameters.AddWithValue("@cuit", txtCuitConsulta.Text);
                         SqlDataReader reader = command.ExecuteReader();
@@ -206,7 +214,7 @@ namespace Facturación_de_proyectos_y_productos
                         {
                             idBarrio = reader["id_barrio"].ToString();
                             idContacto = reader["id_contacto"].ToString();
-
+                            validar = "True";
                         }
 
                         reader.Close();
@@ -238,6 +246,7 @@ namespace Facturación_de_proyectos_y_productos
 
                         }
                         reader.Close();
+                        
                     }
                     catch (SqlException ex)
                     {
@@ -285,8 +294,9 @@ namespace Facturación_de_proyectos_y_productos
                     {
                         conexion6.Open();
 
-                        String DatosProyecto = "Select * From Clientes where cuit = '" + this.txtCuitConsulta.Text + "'";
+                        String DatosProyecto = "Select * From Clientes where cuit = @cuit and borrado = 0";
                         SqlCommand command2 = new SqlCommand(DatosProyecto, conexion6);
+                        command2.Parameters.AddWithValue("@cuit", txtCuitConsulta.Text);
 
                         SqlDataReader reader1 = command2.ExecuteReader();
 
@@ -303,7 +313,7 @@ namespace Facturación_de_proyectos_y_productos
                             row["Barrio"] = nombreBarrio;
 
                             grilla.Rows.Add(row);
-
+                            validar = "True";
                         }
                         reader1.Close();
                     }
@@ -318,6 +328,12 @@ namespace Facturación_de_proyectos_y_productos
                         {
                             conexion6.Close();
                         }
+                    }
+                    if (validar == "none") 
+                    {
+                        MessageBox.Show(string.Concat("Cuit no encontrado"), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtCuitConsulta.Text = "";
+                        return;
                     }
                 }
 
@@ -416,6 +432,11 @@ namespace Facturación_de_proyectos_y_productos
         private void grillaCliente_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

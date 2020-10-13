@@ -115,6 +115,7 @@
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver al menu";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblSeleccion
             // 
