@@ -90,15 +90,22 @@ namespace Facturación_de_proyectos_y_productos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Cont = 0;
-            dt.Clear();
+            
 
             if (BoxNumFact.Text == "")
             {
                 MessageBox.Show("Por favor ingrese un numero de factura", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+
             else
+
+                
             {
+                Cont = 0;
+                dt.Clear();
+
+
                 SqlConnection conexion = new SqlConnection();
                 conexion.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
 
@@ -126,6 +133,7 @@ namespace Facturación_de_proyectos_y_productos
                         
 
                         MessageBox.Show("No se encuentra el numero de factura ingresado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                         /*
                         dt.Clear();
                         BoxNumFact.Text = "";
