@@ -27,7 +27,7 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion.Open();
 
-                String consultaSqlNombreRepetido = "Select * From Usuarios";
+                String consultaSqlNombreRepetido = "Select * From Usuarios where borrado = 0";
                 SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -63,7 +63,7 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion2.Open();
 
-                String consultaSqlNombreRepetido = "Select * From Productos";
+                String consultaSqlNombreRepetido = "Select * From Productos where borrado = 0";
                 SqlCommand command2 = new SqlCommand(consultaSqlNombreRepetido, conexion2);
 
                 SqlDataReader reader = command2.ExecuteReader();

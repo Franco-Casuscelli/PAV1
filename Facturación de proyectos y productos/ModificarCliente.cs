@@ -32,7 +32,7 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion.Open();
 
-                String consultaSqlBarrio = "Select * From Barrios";
+                String consultaSqlBarrio = "Select * From Barrios where borrado = 0";
                 SqlCommand command = new SqlCommand(consultaSqlBarrio, conexion);
 
                 SqlDataReader reader = command.ExecuteReader();
@@ -62,7 +62,7 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion2.Open();
 
-                String consultaSqlContacto = "Select * From Contactos";
+                String consultaSqlContacto = "Select * From Contactos where borrado = 0";
                 SqlCommand command = new SqlCommand(consultaSqlContacto, conexion2);
 
                 SqlDataReader reader = command.ExecuteReader();

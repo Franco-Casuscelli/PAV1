@@ -56,7 +56,7 @@ namespace Facturación_de_proyectos_y_productos
             {
                 conexion.Open();
 
-                String consultaSqlContacto = "Select * From Contactos";
+                String consultaSqlContacto = "Select * From Contactos where borrado = 0";
                 SqlCommand command = new SqlCommand(consultaSqlContacto, conexion);
 
                 SqlDataReader reader = command.ExecuteReader();
