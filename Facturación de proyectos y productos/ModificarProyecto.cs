@@ -14,9 +14,16 @@ namespace Facturación_de_proyectos_y_productos
     public partial class ModificarProyecto : Form
     {
         String ID;
+        String IDProducto;
+        String IDResponsable;
+
+
         public ModificarProyecto(String datoID)
         {
             InitializeComponent();
+
+            BoxProducto.Enabled = false;
+            boxRespondable.Enabled = false;
 
             BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
 
@@ -41,6 +48,8 @@ namespace Facturación_de_proyectos_y_productos
                     BoxDescripcion.Text = reader["descripcion"].ToString();
                     BoxVersion.Text = reader["version"].ToString();
                     BoxAlcance.Text = reader["alcance"].ToString();
+                    IDProducto = reader["id_producto"].ToString();
+                    IDResponsable = reader["id_responsable"].ToString();
                 }
                 reader.Close();
             }
@@ -54,6 +63,77 @@ namespace Facturación_de_proyectos_y_productos
                 if (conexion.State == ConnectionState.Open)
                 {
                     conexion.Close();
+                }
+            }
+
+
+            /// -------
+            /// 
+            SqlConnection conexion1 = new SqlConnection();
+            conexion1.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion1.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Productos where id_producto = @valor";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion1);
+
+                command.Parameters.AddWithValue("@valor", IDProducto);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    BoxProducto.Text = reader["nombre"].ToString();
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion1.State == ConnectionState.Open)
+                {
+                    conexion1.Close();
+                }
+            }
+
+            //----
+
+            SqlConnection conexion2 = new SqlConnection();
+            conexion2.ConnectionString = "Data Source = (localdb)\\SQLEXPRESS; Initial Catalog = TPI; Integrated Security = True";
+
+            try
+            {
+                conexion2.Open();
+
+                String consultaSqlNombreRepetido = "Select * From Usuarios where id_usuario = @valor";
+                SqlCommand command = new SqlCommand(consultaSqlNombreRepetido, conexion2);
+
+                command.Parameters.AddWithValue("@valor", IDResponsable);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    boxRespondable.Text = reader["usuario"].ToString();
+                }
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conexion2.State == ConnectionState.Open)
+                {
+                    conexion2.Close();
                 }
             }
 
