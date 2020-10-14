@@ -260,11 +260,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReporteFacturaFecha.rdlc" />
     <EmbeddedResource Include="ReporteFactura.resx">
       <DependentUpon>ReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteFacturas.rdlc" />
     <None Include="DataSetFacturas.xsc">
       <DependentUpon>DataSetFacturas.xsd</DependentUpon>
     </None>
