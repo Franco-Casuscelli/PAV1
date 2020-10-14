@@ -30,53 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Rango_FechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetFacturas = new Facturación_de_proyectos_y_productos.DataSetFacturas();
-            this.FacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.FacturasTableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.FacturasTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.FechaDesde = new System.Windows.Forms.DateTimePicker();
             this.FechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.Rango_FechaTableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.Rango_FechaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Rango_FechaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).BeginInit();
+            this.FacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetFacturas = new Facturación_de_proyectos_y_productos.DataSetFacturas();
+            this.Rango_FechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FacturasTableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.FacturasTableAdapter();
+            this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable2TableAdapter = new Facturación_de_proyectos_y_productos.DataSetFacturasTableAdapters.DataTable2TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rango_FechaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Rango_FechaBindingSource
-            // 
-            this.Rango_FechaBindingSource.DataMember = "Rango_Fecha";
-            this.Rango_FechaBindingSource.DataSource = this.DataSetFacturas;
-            // 
-            // DataSetFacturas
-            // 
-            this.DataSetFacturas.DataSetName = "DataSetFacturas";
-            this.DataSetFacturas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // FacturasBindingSource
-            // 
-            this.FacturasBindingSource.DataMember = "Facturas";
-            this.FacturasBindingSource.DataSource = this.DataSetFacturas;
             // 
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Rango_FechaBindingSource;
+            reportDataSource1.Value = this.DataTable2BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Facturación_de_proyectos_y_productos.ReporteFacturaFecha.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Facturación_de_proyectos_y_productos.InformeDefinitivo.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 70);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(752, 433);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // FacturasTableAdapter
-            // 
-            this.FacturasTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -124,9 +107,33 @@
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // Rango_FechaTableAdapter
+            // FacturasBindingSource
             // 
-            this.Rango_FechaTableAdapter.ClearBeforeFill = true;
+            this.FacturasBindingSource.DataMember = "Facturas";
+            this.FacturasBindingSource.DataSource = this.DataSetFacturas;
+            // 
+            // DataSetFacturas
+            // 
+            this.DataSetFacturas.DataSetName = "DataSetFacturas";
+            this.DataSetFacturas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Rango_FechaBindingSource
+            // 
+            this.Rango_FechaBindingSource.DataMember = "Rango_Fecha";
+            this.Rango_FechaBindingSource.DataSource = this.DataSetFacturas;
+            // 
+            // FacturasTableAdapter
+            // 
+            this.FacturasTableAdapter.ClearBeforeFill = true;
+            // 
+            // DataTable2BindingSource
+            // 
+            this.DataTable2BindingSource.DataMember = "DataTable2";
+            this.DataTable2BindingSource.DataSource = this.DataSetFacturas;
+            // 
+            // DataTable2TableAdapter
+            // 
+            this.DataTable2TableAdapter.ClearBeforeFill = true;
             // 
             // ReporteFactura
             // 
@@ -145,9 +152,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reporte facturas de proyectos";
             this.Load += new System.EventHandler(this.ReporteBarrio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Rango_FechaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rango_FechaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +173,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.BindingSource Rango_FechaBindingSource;
-        private DataSetFacturasTableAdapters.Rango_FechaTableAdapter Rango_FechaTableAdapter;
+        private System.Windows.Forms.BindingSource DataTable2BindingSource;
+        private DataSetFacturasTableAdapters.DataTable2TableAdapter DataTable2TableAdapter;
     }
 }

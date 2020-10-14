@@ -461,3 +461,5 @@ C:\Users\Mateo\Desktop\pavava\Facturación de proyectos y productos\obj\Debug\Fa
 C:\Users\Mateo\Desktop\pavava\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.csproj.CopyComplete
 C:\Users\Mateo\Desktop\pavava\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.exe
 C:\Users\Mateo\Desktop\pavava\Facturación de proyectos y productos\obj\Debug\Facturación de proyectos y productos.pdb
+C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\RdlCompile.cache
+C:\Users\frank\Desktop\ProyectoPAV\Facturación de proyectos y productos\obj\Debug\RdlCompile.compiled

@@ -4,6 +4,9 @@
 
     partial class DataSetFacturas
     {
+        partial class DataTable1DataTable
+        {
+        }
     }
 }
 

@@ -232,6 +232,7 @@
     <EmbeddedResource Include="CrearContacto.resx">
       <DependentUpon>CrearContacto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformeDefinitivo.rdlc" />
     <EmbeddedResource Include="ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </EmbeddedResource>

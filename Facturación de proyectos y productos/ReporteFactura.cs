@@ -24,10 +24,9 @@ namespace Facturación_de_proyectos_y_productos
 
         private void ReporteBarrio_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'DataSetFacturas.Rango_Fecha' Puede moverla o quitarla según sea necesario.
-            this.Rango_FechaTableAdapter.Fill(this.DataSetFacturas.Rango_Fecha,Fecha1,Fecha2);
+            this.DataTable2TableAdapter.Fill(this.DataSetFacturas.DataTable2);
 
-            this.reportViewer1.RefreshReport();
+
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
@@ -40,8 +39,7 @@ namespace Facturación_de_proyectos_y_productos
             DateTime Fecha1 = FechaDesde.Value;
             DateTime Fecha2 = FechaHasta.Value;
 
-            this.Rango_FechaTableAdapter.Fill(this.DataSetFacturas.Rango_Fecha, Fecha1, Fecha2);
-
+            this.DataTable2TableAdapter.Fill(this.DataSetFacturas.DataTable2);
             this.reportViewer1.RefreshReport();
         }
     }
