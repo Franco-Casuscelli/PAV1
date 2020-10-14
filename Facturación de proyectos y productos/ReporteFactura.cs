@@ -13,10 +13,20 @@ namespace Facturación_de_proyectos_y_productos
     public partial class ReporteFactura : Form
     {
 
-        private DataTable dt;
-        public ReporteFactura()
+
+        private String Fact = "none";
+        public ReporteFactura(String NumFact)
         {
+            
             InitializeComponent();
+
+            Fact = NumFact;
+            if (Fact != "none")
+            {
+                this.DataTable2TableAdapter.FillBy1(this.DataSetFacturas.DataTable2, Fact);
+                this.reportViewer1.RefreshReport();
+            }
+
         }
 
         public DateTime Fecha1 { get; set; }
@@ -25,7 +35,7 @@ namespace Facturación_de_proyectos_y_productos
         private void ReporteBarrio_Load(object sender, EventArgs e)
         {
             this.DataTable2TableAdapter.Fill(this.DataSetFacturas.DataTable2);
-
+            
 
         }
 
@@ -39,7 +49,10 @@ namespace Facturación_de_proyectos_y_productos
             DateTime Fecha1 = FechaDesde.Value;
             DateTime Fecha2 = FechaHasta.Value;
 
-            this.DataTable2TableAdapter.FillBy(this.DataSetFacturas.DataTable2,Fecha1,Fecha2);
+            Fact = "none";
+            this.DataTable2TableAdapter.FillBy(this.DataSetFacturas.DataTable2, Fecha1, Fecha2);
+            
+            
             
             this.reportViewer1.RefreshReport();
         }

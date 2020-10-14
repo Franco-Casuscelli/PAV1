@@ -47,6 +47,7 @@
             this.BoxResponsable = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.BoxUsuarioLogueado = new System.Windows.Forms.TextBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,7 +197,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(265, 575);
+            this.btnSalir.Location = new System.Drawing.Point(152, 575);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(129, 26);
             this.btnSalir.TabIndex = 42;
@@ -217,12 +218,23 @@
             this.BoxUsuarioLogueado.TabIndex = 43;
             this.BoxUsuarioLogueado.TextChanged += new System.EventHandler(this.BoxUsuarioLogueado_TextChanged);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(366, 575);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(129, 26);
+            this.btnImprimir.TabIndex = 44;
+            this.btnImprimir.Text = "Imprimir factura";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // ConsultarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(659, 626);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.BoxUsuarioLogueado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.BoxResponsable);
@@ -274,5 +286,6 @@
         private System.Windows.Forms.TextBox BoxResponsable;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox BoxUsuarioLogueado;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

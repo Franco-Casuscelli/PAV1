@@ -20,6 +20,7 @@ namespace Facturación_de_proyectos_y_productos
         private String idProyecto;
         private String precio;
         private int Cont;
+        String NumFact;
 
         public ConsultarFactura()
         {
@@ -28,6 +29,7 @@ namespace Facturación_de_proyectos_y_productos
 
             BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
 
+            btnImprimir.Enabled = false;
             txtDireccion.Enabled = false;
             txtCuit.Enabled = false;
             BoxCliente.Enabled = false;
@@ -95,6 +97,7 @@ namespace Facturación_de_proyectos_y_productos
             if (BoxNumFact.Text == "")
             {
                 MessageBox.Show("Por favor ingrese un numero de factura", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnImprimir.Enabled = false;
                 return;
             }
 
@@ -104,6 +107,10 @@ namespace Facturación_de_proyectos_y_productos
             {
                 Cont = 0;
                 dt.Clear();
+                NumFact = BoxNumFact.Text;
+
+
+                btnImprimir.Enabled = true;
 
 
                 SqlConnection conexion = new SqlConnection();
@@ -133,6 +140,7 @@ namespace Facturación_de_proyectos_y_productos
                         
 
                         MessageBox.Show("No se encuentra el numero de factura ingresado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        btnImprimir.Enabled = false;
                         return;
                         /*
                         dt.Clear();
@@ -356,11 +364,22 @@ namespace Facturación_de_proyectos_y_productos
 
 
             }
+
+
         }
 
         private void BoxUsuarioLogueado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ReporteFactura(NumFact);
+
+            formulario.ShowDialog();
+
+        
         }
     }
 }

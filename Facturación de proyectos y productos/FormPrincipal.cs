@@ -132,7 +132,8 @@ namespace Facturación_de_proyectos_y_productos
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new ReporteFactura();
+            String NumFact = "none";
+            Form formulario = new ReporteFactura(NumFact);
             formulario.ShowDialog();
         }
     }
