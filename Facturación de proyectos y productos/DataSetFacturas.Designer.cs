@@ -2146,7 +2146,7 @@ SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador, borrad
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Facturas.numero_factura, Clientes.cuit, Facturas.fecha, Usuarios.usuario
@@ -2154,6 +2154,16 @@ FROM            Clientes INNER JOIN
                          Facturas ON Clientes.id_cliente = Facturas.id_cliente INNER JOIN
                          Usuarios ON Facturas.id_usuario_creador = Usuarios.id_usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Facturas.numero_factura, Clientes.cuit, Facturas.fecha, Usuarios.usuario
+FROM            Clientes INNER JOIN
+                         Facturas ON Clientes.id_cliente = Facturas.id_cliente INNER JOIN
+                         Usuarios ON Facturas.id_usuario_creador = Usuarios.id_usuario
+WHERE        (Facturas.fecha BETWEEN @Fecha1 AND @Fecha2)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha2", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2175,6 +2185,34 @@ FROM            Clientes INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetFacturas.DataTable2DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetFacturas.DataTable2DataTable dataTable = new DataSetFacturas.DataTable2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DataSetFacturas.DataTable2DataTable dataTable, System.DateTime Fecha1, System.DateTime Fecha2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(Fecha1));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha2));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetFacturas.DataTable2DataTable GetDataBy(System.DateTime Fecha1, System.DateTime Fecha2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(Fecha1));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha2));
             DataSetFacturas.DataTable2DataTable dataTable = new DataSetFacturas.DataTable2DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

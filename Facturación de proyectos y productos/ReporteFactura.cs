@@ -39,7 +39,8 @@ namespace Facturación_de_proyectos_y_productos
             DateTime Fecha1 = FechaDesde.Value;
             DateTime Fecha2 = FechaHasta.Value;
 
-            this.DataTable2TableAdapter.Fill(this.DataSetFacturas.DataTable2);
+            this.DataTable2TableAdapter.FillBy(this.DataSetFacturas.DataTable2,Fecha1,Fecha2);
+            
             this.reportViewer1.RefreshReport();
         }
     }
