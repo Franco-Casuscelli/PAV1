@@ -192,6 +192,12 @@ namespace Facturación_de_proyectos_y_productos
             
             Cont = 0;
 
+            if (Dato.UsuarioLogueado != "administrador")
+            {
+                btnModificar.Enabled = false;
+                BtnEliminar.Enabled = false;
+            }
+
         }
 
         private void Return_Click(object sender, EventArgs e)

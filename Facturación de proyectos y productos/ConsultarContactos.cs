@@ -128,6 +128,12 @@ namespace Facturación_de_proyectos_y_productos
             BoxApellido.Text = "";
             Cont = 0;
 
+            if (Dato.UsuarioLogueado != "administrador")
+            {
+                btnModificar.Enabled = false;
+                BtnEliminar.Enabled = false;
+            }
+
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

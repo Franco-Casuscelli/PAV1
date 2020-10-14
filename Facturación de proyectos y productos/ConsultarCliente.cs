@@ -388,7 +388,14 @@ namespace Facturación_de_proyectos_y_productos
 
 
 
-        }
+            if (Dato.UsuarioLogueado != "administrador")
+            {
+                btnModificar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
+
+
+            }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {

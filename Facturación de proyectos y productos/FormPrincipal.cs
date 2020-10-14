@@ -61,6 +61,15 @@ namespace Facturación_de_proyectos_y_productos
             Login login = new Login();
             login.ShowDialog();
             BoxUsuarioLogueado.Text = Dato.UsuarioLogueado;
+
+            if (Dato.UsuarioLogueado != "administrador")
+            {
+                stripCrear.Enabled = false;
+                crearToolStripMenuItem1.Enabled = false;
+                crearToolStripMenuItem2.Enabled = false;
+                crearToolStripMenuItem3.Enabled = false;
+                crearToolStripMenuItem4.Enabled = false;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

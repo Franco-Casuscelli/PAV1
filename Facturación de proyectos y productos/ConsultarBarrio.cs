@@ -137,7 +137,14 @@ namespace Facturación_de_proyectos_y_productos
                 TextConsultaBarrio.Text = "";
                 Cont = 0;
 
-        }
+
+            if (Dato.UsuarioLogueado != "administrador")
+            {
+                btnModificar.Enabled = false;
+                BtnEliminar.Enabled = false;
+            }
+
+            }
 
         private void TextConsultaBarrio_TextChanged(object sender, EventArgs e)
         {
