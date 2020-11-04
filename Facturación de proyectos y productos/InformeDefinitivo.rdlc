@@ -331,7 +331,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE DE FACTURAS EMITIDAS POR PROYECTOS</Value>
+                  <Value>REPORTE DE FACTURAS EMITIDAS </Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -340,9 +340,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>5.17132cm</Left>
+          <Left>6.49424cm</Left>
           <Height>0.6cm</Height>
-          <Width>9.1675cm</Width>
+          <Width>6.07188cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
